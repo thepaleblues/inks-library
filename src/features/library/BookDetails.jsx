@@ -1,24 +1,29 @@
-import { Link } from 'react-router-dom'
-import { books } from '../../data/books.js';
-import { useState, useEffect } from 'react'
-import { getCover } from '../../utils/createBook.js';
+import {useEffect } from 'react'
+
+import { 
+   Link, 
+   useParams 
+} from 'react-router-dom'
+
 import './BookDetails.css'
 
+import { getCover } from '../../utils/createBook.js';
+import { saveProfile } from '../../storage/localStorage.js';
 
-function BookInfo({ title, author, description, mood, cover }) {
+
+function BookInfo({ author, description, mood, cover }) {
    return (
       <>
-         <div className='main-info' id='info'>
-            <h1>{title}</h1>
+         <div className='main-info'>
             <h2>{author}</h2>
          </div>
-         <div className='other-info' id='info'>
+         <div className='other-info'>
             <p>{description}</p>
-            <div className='book-mood' id='info'>
+            <div className='book-mood'>
                <b>Mood/s: </b> {mood}
             </div>
          </div>
-         <div className='cover-container' id='info'>
+         <div className='cover-container'>
             <img src={getCover(cover)}></img>
          </div>
 
@@ -27,16 +32,53 @@ function BookInfo({ title, author, description, mood, cover }) {
 }
 
 function BookDetails ({    
-   viewedBook
+   currentBook,
+   setViewedBook,
+   setMoodScorePoints,
+   profile,
+   setProfile
 }) {
+
+   const { bookTitle } = useParams();
+
+   useEffect(() => {
+      if (!currentBook) return;
+
+      if (profile.viewedBooks.includes(currentBook.id)) {
+         return;
+      }
+
+      const updatedProfile = {
+         viewedBooks: [...profile.viewedBooks, currentBook.id],
+         moodScore: profile.moodScore.map((mood) => {
+            if (currentBook.mood.includes(mood.id)) {
+               return { ...mood, points: mood.points + 1 };
+            }
+            return { ...mood };
+         }),
+      };
+
+      saveProfile(updatedProfile);
+      setViewedBook(updatedProfile.viewedBooks);
+      setMoodScorePoints(updatedProfile.moodScore);
+      setProfile(updatedProfile);
+
+   }, [currentBook, 
+      profile, 
+      setViewedBook, 
+      setMoodScorePoints, 
+      setProfile]
+   );
+
    return (
       <div className='book-details-container'>
+         <h1>{bookTitle}</h1>
          <BookInfo
-            title={viewedBook.title}
-            author={viewedBook.author}
-            description={viewedBook.description}
-            mood={viewedBook.mood.join(' | ')}
-            cover={viewedBook.id}
+            id={currentBook.id}
+            author={currentBook.author}
+            description={currentBook.description}
+            mood={currentBook.mood.join(', ')}
+            cover={currentBook.id}
          />
          <Link to='/library'>
             <button>
@@ -47,5 +89,6 @@ function BookDetails ({
       </div>
    )
 }
+
 
 export default BookDetails
