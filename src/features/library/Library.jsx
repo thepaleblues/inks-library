@@ -1,14 +1,17 @@
-import { useState, useEffect } from 'react'
-import moods from '../../data/moods.js'
-import { books } from '../../data/books.js';
-import { getCover } from '../../utils/createBook.js';
-import './Library.css'
+import { 
+   useState, 
+   useEffect 
+} from 'react'
+
 import { Link } from 'react-router-dom'
 
+import './Library.css'
 
-// ? Access these at Ink's dialogues instead
-const inksDialogue = "So, what are we feeling today?";
-const searchDialogue = "Got something in mind?"
+import moods from '../../data/moods.js';
+import dialogues from '../../ink/dialogues.js'
+import books from '../../data/books.js';
+import { getCover } from '../../utils/createBook.js';
+
 
 function NoResult() {
    return (
@@ -19,15 +22,14 @@ function NoResult() {
    )
 }
 
-
 function Filters({ 
-   filters, 
    handleFilterChange 
 }) {
    return (
       <div className='filter-container'>
          {
-            moods.map((mood) => {
+            // TODO: FIX DISPLAY MOOD HERE
+            moods.map(mood => {
                return (
                   <button 
                      className={`${mood}-filter`} 
@@ -39,9 +41,10 @@ function Filters({
                      {mood}
                   </button>
                )
-            })
+            }
+            )
          }
-         <h3>{searchDialogue}</h3>
+         <h3>{dialogues.defaults.search}</h3>
          <input 
             type='search' 
             placeholder='Search for book'
@@ -54,23 +57,19 @@ function Filters({
 }
 
 export function DisplayBooks({ 
-   filters, 
-   bookResults, 
-   viewedBook,
-   setViewedBook 
+   bookResults,
+   setCurrentBook
 }) {
-
    return (
       <div className='books-container'>
          {
             bookResults.sort((a, b) => {
-         
                const slice = (title) => {
                   return title.toLowerCase().startsWith('The ') ? title.slice(4) : 
                            title.toLowerCase().startsWith('A ') ? title.slice(2) : 
                            title
                }
-               
+   
                const titleA = slice(a.title.toLowerCase());
                const titleB = slice(b.title.toLowerCase());
 
@@ -80,14 +79,16 @@ export function DisplayBooks({
                return (
                   <div className='book-container' key={book.id}>
                      <div className='book-cover'>
-                        <Link to='/book-details' // TODO: link to individual pages
-                           onClick={() => {setViewedBook(book)}}
+                        <Link to={`/book-details/${book.title}`} // TODO: link to individual pages
+                           onClick={() => {
+                              setCurrentBook(book)
+                           }}
                         >
                            <img src={getCover(book.id)}></img>
                         </Link>
                      </div>
                      <em>{book.title}</em>
-                     <p><b>Author/s:</b> {book.author.join(' | ')}</p>
+                     <p><b>Author/s:</b> {book.author.join(', ')}</p>
                   </div>
                )
             })
@@ -98,14 +99,17 @@ export function DisplayBooks({
 
 
 export function Library({ 
-   viewedBook,
-   setViewedBook 
+   currentBook,
+   setCurrentBook
 }) {
    const [bookResults, setBookResults] = useState([]);
-   const [filters, setFilters] = useState({
-      search: ``,
-      mood: ``
-   });
+   const [filters, setFilters] = useState(() => {
+   
+   const saved = localStorage.getItem("library-filters");
+      return saved ? JSON.parse(saved) : {
+         search: ``,
+         mood: ``
+   }});
    
    function handleFilterChange(filterName, value) { 
       setFilters({
@@ -131,13 +135,17 @@ export function Library({
          return moodMatches && searchMatches;
       });
       setBookResults(filteredBooks);
-      
    }, [filters.mood, filters.search]);
+
+
+   useEffect(() => {
+      localStorage.setItem("library-filters", JSON.stringify(filters));
+   }, [filters]);
 
 
    return (
       <div className='library-container'>
-         <h3>{inksDialogue}</h3>
+         <h3>{dialogues.defaults.moodFilter}</h3>
          <Filters 
             filters={filters}
             handleFilterChange={handleFilterChange}
@@ -147,15 +155,22 @@ export function Library({
             ? (
                <NoResult />
             ) : (
-                <DisplayBooks 
-                  filters={filters}
-                  bookResults={bookResults}
-                  viewedBook={viewedBook}
-                  setViewedBook={setViewedBook}
-               />
+               <>
+                  <div className='book-count-container'>
+                     {
+                        bookResults.length == 1 ? (<i>Showing {bookResults.length} book.</i>)
+                        : (<i>Showing {bookResults.length} books.</i>)
+                     }
+                  </div>
+                  <DisplayBooks 
+                     filters={filters}
+                     bookResults={bookResults}
+                     currentBook={currentBook}
+                     setCurrentBook={setCurrentBook}
+                  />
+               </>
             )
          }
-        
-      </div>
-   )
+      </div>  
+   ) 
 }
