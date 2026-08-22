@@ -23,37 +23,44 @@ function NoResult() {
 }
 
 function Filters({ 
-   handleFilterChange 
+   handleFilterChange,
+   filters
 }) {
    return (
       <div className='filter-container'>
-         {
-            // TODO: FIX DISPLAY MOOD HERE
-            moods.map(mood => {
+         <ul className='filter-buttons'>
+            {moods.map(mood => {
+               const isActive = filters.mood === mood;
                return (
-                  <button 
-                     className={`${mood}-filter`} 
-                     key={mood}
-                     onClick={() => {
-                        handleFilterChange("mood", mood);
-                     }}
-                  > 
-                     {mood}
-                  </button>
-               )
-            }
-            )
-         }
+                  <li key={mood}>
+                     <button
+                        className={isActive ? 'active' : ''}
+                        aria-pressed={isActive}
+                        onClick={() => {
+                           handleFilterChange(
+                              'mood',
+                              isActive ? '' : mood
+                           );
+                        }}
+                     >
+                        {mood}
+                     </button>
+                  </li>
+               );
+            })}
+         </ul>
+
          <h3>{dialogues.defaults.search}</h3>
+
          <input 
             type='search' 
             placeholder='Search for book'
             onChange={(e) => {
-               handleFilterChange("search", e.target.value);
+               handleFilterChange('search', e.target.value);
             }}
          />
       </div>
-   )
+   );
 }
 
 export function DisplayBooks({ 
@@ -97,20 +104,20 @@ export function DisplayBooks({
    )
 }
 
-
 export function Library({ 
    currentBook,
    setCurrentBook
 }) {
    const [bookResults, setBookResults] = useState([]);
+
    const [filters, setFilters] = useState(() => {
-   
-   const saved = localStorage.getItem("library-filters");
+      const saved = localStorage.getItem("library-filters");
       return saved ? JSON.parse(saved) : {
          search: ``,
          mood: ``
-   }});
-   
+      }
+   });
+
    function handleFilterChange(filterName, value) { 
       setFilters({
          ...filters,
@@ -137,11 +144,9 @@ export function Library({
       setBookResults(filteredBooks);
    }, [filters.mood, filters.search]);
 
-
    useEffect(() => {
       localStorage.setItem("library-filters", JSON.stringify(filters));
    }, [filters]);
-
 
    return (
       <div className='library-container'>
@@ -158,7 +163,7 @@ export function Library({
                <>
                   <div className='book-count-container'>
                      {
-                        bookResults.length == 1 ? (<i>Showing {bookResults.length} book.</i>)
+                        bookResults.length === 1 ? (<i>Showing {bookResults.length} book.</i>)
                         : (<i>Showing {bookResults.length} books.</i>)
                      }
                   </div>
