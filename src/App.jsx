@@ -29,6 +29,28 @@ function App() {
     .sort((a, b) => b.points - a.points) 
     .slice(0, 2);
 
+  const [filters, setFilters] = useState(() => {
+    const saved = sessionStorage.getItem("library-filters");
+    return saved ? JSON.parse(saved) : {
+        search: ``,
+        mood: ``
+    }
+  });
+
+  const [currentPage, setCurrentPage] = useState(() => {
+    return localStorage.getItem("current-page") || "/";
+  });
+
+  useEffect(() => {
+    if (currentPage === '/') {
+      setFilters({
+        search: ``,
+        mood: ``
+      })
+    }
+    sessionStorage.removeItem("library-filters");
+  }, [currentPage])
+
   return (
     <BrowserRouter>
         <Navbar />
@@ -38,6 +60,8 @@ function App() {
           element={<Home 
             moodScorePoints={moodScorePoints}
             topMoods={topMoods}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
           />} 
         />
         <Route 
@@ -45,6 +69,10 @@ function App() {
           element={<Library 
             currentBook={currentBook}
             setCurrentBook={setCurrentBook}
+            filters={filters}
+            setFilters={setFilters}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
           />} 
         />
         <Route 

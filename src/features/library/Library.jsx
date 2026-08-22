@@ -55,6 +55,7 @@ function Filters({
          <input 
             type='search' 
             placeholder='Search for book'
+            value={filters.search}
             onChange={(e) => {
                handleFilterChange('search', e.target.value);
             }}
@@ -106,17 +107,17 @@ export function DisplayBooks({
 
 export function Library({ 
    currentBook,
-   setCurrentBook
+   setCurrentBook,
+   filters,
+   setFilters,
+   setCurrentPage
 }) {
-   const [bookResults, setBookResults] = useState([]);
+   useEffect(() => {
+      setCurrentPage('/library');
+      localStorage.setItem('current-page', '/library');
+   }, [setCurrentPage]);
 
-   const [filters, setFilters] = useState(() => {
-      const saved = localStorage.getItem("library-filters");
-      return saved ? JSON.parse(saved) : {
-         search: ``,
-         mood: ``
-      }
-   });
+   const [bookResults, setBookResults] = useState([]);
 
    function handleFilterChange(filterName, value) { 
       setFilters({
@@ -145,7 +146,7 @@ export function Library({
    }, [filters.mood, filters.search]);
 
    useEffect(() => {
-      localStorage.setItem("library-filters", JSON.stringify(filters));
+      sessionStorage.setItem("library-filters", JSON.stringify(filters));
    }, [filters]);
 
    return (
