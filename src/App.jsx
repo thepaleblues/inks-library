@@ -6,18 +6,26 @@ import {
   Routes,
 } from "react-router-dom";
 
-import "./main.css";
+import "./App.css";
 
 import Home from "./features/home/Home.jsx";
 import { Library } from "./features/library/Library.jsx";
 import BookDetails from "./features/library/BookDetails.jsx";
 import Navbar from "./components/Navigation.jsx";
+import Footer from "./components/Footer.jsx";
+import About from "./components/About.jsx";
 
 import readProfile from "./data/readProfile.js";
-import { loadProfile } from "./storage/localStorage.js";
+import { checkFirstVisit, loadProfile } from "./storage/localStorage.js";
 
 
 function App() {
+  const [isNewUser, setIsNewUser] = useState(() => checkFirstVisit());
+  
+  useEffect(() => {
+    localStorage.setItem("hasVisited", "true");
+  }, []);
+    
   const [currentBook, setCurrentBook] = useState(null);
   
   const initialProfile = loadProfile(readProfile);
@@ -51,6 +59,7 @@ function App() {
     sessionStorage.removeItem("library-filters");
   }, [currentPage])
 
+
   return (
     <BrowserRouter>
         <Navbar />
@@ -60,8 +69,8 @@ function App() {
           element={<Home 
             moodScorePoints={moodScorePoints}
             topMoods={topMoods}
-            currentPage={currentPage}
             setCurrentPage={setCurrentPage}
+            isNewUser={isNewUser}
           />} 
         />
         <Route 
@@ -87,7 +96,12 @@ function App() {
             setProfile={setProfile}
           />} 
         />
+        <Route 
+          path='/about' 
+          element={<About/>} 
+        />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

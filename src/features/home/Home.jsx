@@ -7,11 +7,21 @@ import Recommendations from '../../ink/Recommendations.jsx'
 import dialogues from '../../ink/dialogues.js'
 
 
+function FirstTimer() {
+   return (
+      <div className='first-timer'>
+         <h1>{dialogues.defaults.firstTime1}</h1>
+         <p>{dialogues.defaults.firstTime2}</p>
+      </div>
+   )
+}
+
+
 function Home({
    moodScorePoints,
    topMoods,
-   currentPage,
-   setCurrentPage
+   setCurrentPage,
+   isNewUser
 }) {
    useEffect(() => {
       setCurrentPage('/');
@@ -21,12 +31,19 @@ function Home({
    return (
       <div className='home-container'>
          <h1>{dialogues.defaults.hero}</h1>
-        <Recommendations
-            moodScorePoints={moodScorePoints}
-            topMoods={topMoods}
-        />
+         {
+            isNewUser ? (
+               <FirstTimer />
+            ) : (
+               <Recommendations 
+                  moodScorePoints={moodScorePoints}
+                  topMoods={topMoods}
+               />
+            )
+         }
       </div>
    )
 }
+
 
 export default Home

@@ -1,3 +1,14 @@
+// NEW USER
+export function checkFirstVisit() {
+  const isNewUser = !localStorage.getItem("hasVisited");
+
+  localStorage.setItem("hasVisited", "true");
+
+  return isNewUser;
+}
+
+
+// PROFILE
 const PROFILE_KEY = "inks-library-profile";
 
 export function saveProfile(profile) {
@@ -17,4 +28,3 @@ export function loadProfile(defaultProfile) {
 
   return JSON.parse(saved);
 }
-
