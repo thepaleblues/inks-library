@@ -1,0 +1,37 @@
+@import url("https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css");
+@import "tailwindcss";
+
+
+@theme {
+   --font-sans: "SUIT", sans-serif;
+
+   --color-grey: #EDEDED;
+
+   --background-image-grey-gradient: linear-gradient(
+      135deg,
+      #EDEDED,
+      #F5F3EE
+   );
+}
+
+@layer base {
+   h1 {
+      @apply text-4xl font-semibold;
+   }
+
+   h2 {
+      @apply text-3xl font-semibold;
+   }
+
+   h3 {
+      @apply text-2xl font-semibold;
+   }
+
+   h4 {
+      @apply text-xl font-semibold;
+   }
+
+   p {
+      @apply text-base text-lg;
+   }
+}

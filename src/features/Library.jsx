@@ -1,0 +1,243 @@
+import { 
+   useState, 
+   useEffect 
+} from 'react';
+
+import '../index.css';
+
+import moods from '../data/moods.js';
+import dialogues from '../ink/dialogues.js'
+import books from '../data/books.js';
+import NoResults from '../components/NoResults.jsx';
+import BookCard from '../components/BookCard.jsx';
+
+
+function Filters({ 
+   handleFilterChange,
+   filters
+}) {
+   return (
+      <div className="filter-container">
+         <ul className=" 
+               grid
+               gap-2
+               w-full
+               grid-cols-1
+               sm:grid-cols-2
+               md:grid-cols-3
+               lg:grid-cols-4
+               xl:grid-cols-6
+            "
+         >
+            {moods.map(mood => {
+               const isActive = filters.mood === mood;
+               
+               return (
+                  <li key={mood}>
+                     <button
+                        className={`
+                           p-3 my-1
+                           w-full
+                           bg-white text-stone-600
+                           rounded-xl
+                           hover:bg-black/20
+                           ${isActive ? "!bg-black text-white" : ""}
+                        `}
+                        aria-pressed={isActive}
+                        onClick={() => {
+                           handleFilterChange(
+                              "mood",
+                              isActive ? "" : mood
+                           );
+                        }}
+                     >
+                        {mood}
+                     </button>
+                  </li>
+               );
+            })}
+         </ul>
+      </div>
+   );
+}
+
+export function DisplayBooks({ 
+   bookResults,
+   setCurrentBook
+}) {
+   return (
+      <div className="
+         grid 
+         grid-cols-1 
+         sm:grid-cols-2 
+         lg:grid-cols-3 
+         xl:grid-cols-4 
+         gap-4 min-w-0
+      ">
+         {
+            bookResults.sort((a, b) => {
+               const slice = (title) => {
+                  return title.toLowerCase().startsWith("The ") ? title.slice(4) : 
+                           title.toLowerCase().startsWith("A ") ? title.slice(2) : 
+                           title
+               }
+   
+               const titleA = slice(a.title.toLowerCase());
+               const titleB = slice(b.title.toLowerCase());
+
+               titleA.localeCompare(titleB);
+            })
+            .map((book) => {
+               return (
+                  <BookCard
+                     book={book}
+                     key={book.id}
+                     title={book.title}
+                     author={
+                        book.author.length > 1
+                           ? `${book.author[0]} et al.`
+                           : book.author[0]
+                     }
+                     setCurrentBook={setCurrentBook}
+                  />
+               )
+            })
+         }
+      </div>
+   )
+}
+
+function Library({ 
+   currentBook,
+   setCurrentBook,
+   filters,
+   setFilters,
+   setCurrentPage
+}) {
+   useEffect(() => {
+      setCurrentPage("/library");
+      localStorage.setItem("current-page", "/library");
+   }, [setCurrentPage]);
+
+   const [bookResults, setBookResults] = useState([]);
+
+   function handleFilterChange(filterName, value) { 
+      setFilters({
+         ...filters,
+         [filterName]: value
+      });
+   }
+
+   useEffect(() => {
+      const searchTerm = filters.search.trim().toLowerCase();
+
+      const filteredBooks = books.filter((book) => {
+         const moodMatches =
+            !filters.mood ||
+            book.mood.some((m) => m === filters.mood);
+
+         const searchMatches =
+            !searchTerm ||
+            book.title.toLowerCase().includes(searchTerm) ||
+            (book.author.some((a) => a.toLowerCase()
+               .includes(searchTerm)
+            ));
+         return moodMatches && searchMatches;
+      });
+      setBookResults(filteredBooks);
+   }, [filters.mood, filters.search]);
+
+   useEffect(() => {
+      sessionStorage.setItem("library-filters", JSON.stringify(filters));
+   }, [filters]);
+
+   return (
+      <div className="
+            w-full
+            px-30 pt-20 pb-60      
+            bg-grey-gradient 
+         "
+      >
+         <div className="
+               flex items-center justify-between
+            "
+         >
+            <h3 className="py-10 pt-20 font-bold">
+               {dialogues.defaults.moodFilter}
+            </h3>
+            
+            {/* SEARCH */}
+            <div className="
+                  relative 
+                  mt-10 ml-2
+               "
+            >
+               <input
+                  type="search"
+                  placeholder="...or you can search"
+                  value={filters.search}
+                  className="
+                     w-60
+                     p-3
+                     text-center
+                     bg-black/10
+                     rounded-2xl 
+                     focus:outline-none
+                  "
+                  onChange={(e) => {
+                     handleFilterChange("search", e.target.value);
+                  }}
+               />
+               {filters.search && (
+                  <button
+                     type="button"
+                     aria-label="Clear search"
+                     onClick={() => handleFilterChange("search", "")}
+                     className="
+                        absolute right-3 top-1/2
+                        -translate-y-1/2
+                        text-xl 
+                        text-stone-500
+                        hover:text-black
+                     "
+                  >
+                        ×
+                  </button>
+               )}
+            </div>
+         </div>
+         
+         {/* FILTERS */}
+         <Filters 
+            filters={filters}
+            handleFilterChange={handleFilterChange}
+         />
+
+         {/* RESULTS */}
+         {
+            (bookResults.length === 0 && filters.search !== ``) 
+            ? (
+               <NoResults />
+            ) : (
+               <div className="pt-20">
+                  <div className="text-center pb-5 text-stone-400">
+                     {
+                        bookResults.length === 1 ? (<i>Showing {bookResults.length} book</i>)
+                        : (<i>Showing {bookResults.length} books</i>)
+                     }
+                  </div>
+                  <DisplayBooks
+                     filters={filters}
+                     bookResults={bookResults}
+                     currentBook={currentBook}
+                     setCurrentBook={setCurrentBook}
+                  />
+               </div>
+            )
+         }
+      </div>  
+   ); 
+}
+
+
+export default Library;

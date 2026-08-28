@@ -1,9 +1,9 @@
-import '../features/home/Home.css'
-
 import moodAndGenre from "./moodAndGenre"
 import dialogues from "./dialogues"
 import books from "../data/books";
-import { getCover } from "../utils/createBook";
+import inksDesigns from "./designs";
+
+import BookCard from "../components/BookCard";
 
 
 const getTodaysDate = () => new Date().toDateString();
@@ -35,7 +35,7 @@ function getDailyBooksReco(key, moodBooks) {
 
 function getDailyDialogue(key, recoDialogues) {
    if (!recoDialogues || recoDialogues.length === 0) {
-      return '';
+      return "";
    }
 
    const today = getTodaysDate();
@@ -60,22 +60,37 @@ function getDailyDialogue(key, recoDialogues) {
 }
 
 
-function RecoBooks({ booksToReco }) {
+function RecoBooks({ booksToReco, setCurrentBook}) {
    return (
-      <div className='book-reco-container'>
-         {booksToReco.map(book => (
-            <div className='book-container' key={book.id}>
-               <img src={getCover(book.id)} alt={book.title} />
-               <em>{book.title}</em>
-               <p>{book.author}</p>
-            </div>
-         ))}
+      <div className="
+            grid 
+            gap-4
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3 
+         "
+      >
+         {booksToReco.map(book => 
+            (
+               <BookCard
+                  book={book}
+                  key={book.id}
+                  title={book.title}
+                  author={
+                     book.author.length > 1
+                        ? `${book.author[0]} et al.`
+                        : book.author[0]
+                  }
+                  setCurrentBook={setCurrentBook}
+               />
+            )
+         )}
       </div>
    );
 }
 
 
-function Recommendations({ topMoods }) {
+function Recommendations({ topMoods, setCurrentBook, booksToReco }) {
    const [firstMood, secondMood] = topMoods;
 
    const firstGroup = moodAndGenre.find(group => group.mood === firstMood?.id);
@@ -100,29 +115,55 @@ function Recommendations({ topMoods }) {
    );
 
    return (
-      <div className="reco-container">
-         <div className='first-reco-container' id='reco-container'>
-            <h2>
-               {dialogues.reco.firstBook}
-               {firstAlter.toLowerCase()}.
-            </h2>
+      <div className="
+            pt-10 pb-30 px-60 
+            bg-grey-gradient 
+         "
+      >
+         <div className="w-full">
+            
+            {/* FIRST RECO */}
+            <div className="pb-45"> 
+                  <div className="pb-15">
+                     <h1 className="pt-40 text-center">
+                        {dialogues.reco.firstBook}
+                        {firstAlter.toLowerCase()}.
+                     </h1>
 
-            <em>
-               {dialogues.reco.firstBookComment}
-               <b>{firstDialogue}</b>
-            </em>
+                     <p className="pt-5 text-center">
+                        {dialogues.reco.firstBookComment}
+                        <b>{firstDialogue}</b>
+                     </p>
+                  </div>
 
-            <RecoBooks booksToReco={firstRecoBooks} />
-         </div>
+               <RecoBooks 
+                  booksToReco={firstRecoBooks} 
+                  setCurrentBook={setCurrentBook}
+               />
+            </div>
 
-         <div className='second-reco-container'>
-            <h3>
-               {dialogues.reco.suggestionLine1}
-               {secondAlter.toLowerCase()}
-               {dialogues.reco.suggestionLine2}
-            </h3>
-
-            <RecoBooks booksToReco={secondRecoBooks} />
+            {/* SECOND RECO */}
+            <div className="pb-40">
+               <div className="
+                     flex justify-center
+                     pt-20 pb-15 
+                  "
+               >
+                  <img 
+                     src={inksDesigns.neutral.image} 
+                     className="max-h-20"
+                  />
+                  <h1 className="pt-5 pl-5 font-bold">
+                     {dialogues.reco.suggestionLine}
+                     {secondAlter.toLowerCase()} ?
+                  </h1>
+               </div>
+               
+               <RecoBooks 
+                  booksToReco={secondRecoBooks}
+                  setCurrentBook={setCurrentBook}
+               />
+            </div>
          </div>
       </div>
    );

@@ -1,0 +1,84 @@
+import inksDesigns from '../ink/designs'
+
+
+function How({ num, title, texts }) {
+   return(
+      <div className="
+            flex-1 basis-0 
+            px-5 pt-10 pb-15
+            bg-white
+         "
+      >
+         <h3 className="pb-3">{num}</h3>
+         <h4 className="pb-3">{title.toUpperCase()}</h4>
+         <p>{texts}</p>
+      </div>
+   )
+}
+
+function About() {
+   return (
+      <div className="
+            flex flex-col items-center
+            min-h-dvh
+            pt-20 px-60
+            text-center
+            bg-grey-gradient
+         "
+      >
+         {/* HERO */}
+         <div className="pb-5">
+            <h1 className="pb-5">
+                  About Ink
+            </h1>
+             <img
+               src={inksDesigns.question.image}
+               className="max-h-40 pl-3">
+            </img>
+         </div>
+
+         <div className="pl-5 pt-10"> 
+            
+            {/* INTRO */}
+            <div className="pb-15">
+               <h2 className="pb-3">
+                  Not sure what classic to read next?
+               </h2>
+
+               <p className="px-20">
+                  Ink is a curated guide to Penguin Classics, made for readers who are exploring classic literature and don't know where to start.
+               </p>
+            </div>
+            
+            {/* HOW */}
+            <h2 className="pb-2">How it works</h2>
+            <div className="
+                  flex flex-cols-1
+                  w-full
+                  gap-5
+                  pt-5
+               "
+            >
+               <How 
+                  num="01"
+                  title="Pick a Mood"
+                  texts="Choose your mood. Ink will take it from there."
+               />
+               <How 
+                  num="02"
+                  title="Explore"
+                  texts="See what Ink has in mind for you."
+               />
+               <How 
+                  num="03"
+                  title="Find Your Read"
+                  texts="Ink recommends a classic you might enjoy."
+               />
+            </div>
+         </div>
+      </div>
+   );
+}
+
+
+export default About
