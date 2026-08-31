@@ -58,6 +58,10 @@ function App() {
     }
     sessionStorage.removeItem("library-filters");
   }, [currentPage])
+  
+  useEffect(() => {
+    console.log(`top moods:`, topMoods)
+  }, [topMoods])
 
   return (
     <BrowserRouter>
@@ -88,7 +92,7 @@ function App() {
             />} 
           />
           <Route 
-            path="/book-details/:bookTitle" 
+            path="/book-details/:bookId" 
             element={<BookDetails 
               profile={profile}
               setProfile={setProfile}
@@ -97,7 +101,6 @@ function App() {
               currentBook={currentBook}
               moodScorePoints={moodScorePoints}
               setMoodScorePoints={setMoodScorePoints}
-
             />} 
           />
           <Route 

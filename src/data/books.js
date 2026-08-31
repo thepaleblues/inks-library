@@ -3,7 +3,7 @@ import { createBook } from "../utils/createBook";
 
 const books  = [
    createBook({
-      id: "aenid",
+      id: "the-aeneid",
       title: "The Aeneid",
       author: [
          "Virgil",
@@ -16,7 +16,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "analects",
+      id: "the-analects",
       title: "The Analects",
       author: [
          "Confucius",
@@ -28,7 +28,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "arabian",
+      id: "the-arabian-nights",
       title: "The Arabian Nights: Tales from a Thousand and One Nights",
       description: "Scheherazade tells a series of interconnected stories to delay her execution, weaving together tales of kings, merchants, adventurers, lovers, and magical beings.",
       mood: [
@@ -37,7 +37,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "art",
+      id: "the-art-of-war",
       title: "The Art of War",
       author: [
          "Sun Tzu",
@@ -50,7 +50,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "bhagavad",
+      id: "the-bhagavad-gita",
       title: "The Bhagavad Gita",
       description: "Prince Arjuna struggles with whether he should fight in an approaching war, receiving guidance from Krishna about duty, morality, and spiritual purpose.",
       mood: [
@@ -69,7 +69,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "beyond",
+      id: "beyond-good-and-evil",
       title: "Beyond Good and Evil",
       author: [
          "Friedrich Nietzsche",
@@ -78,7 +78,7 @@ const books  = [
       mood: ["Existential Crisis"]
    }),
    createBook({
-      id: "brothers",
+      id: "the-brothers-karamazov",
       title: "The Brothers Karamazov",
       author: [
          "Fyodor Dostoevsky",
@@ -102,7 +102,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "canterbury",
+      id: "the-canterbury-tales",
       title: "The Canterbury Tales",
       author: [
          "Geoffrey Chaucer",
@@ -115,7 +115,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "castle",
+      id: "the-castle",
       title: "The Castle",
       author: [
          "Franz Kafka",
@@ -127,7 +127,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "communist",
+      id: "the-communist-manifesto",
       title: "The Communist Manifesto",
       author: [
          "Karl Marx",
@@ -152,7 +152,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "count",
+      id: "the-count-of-monte-cristo",
       title: "The Count of Monte Cristo",
       author: [
          "Alexandre Dumas",
@@ -166,7 +166,7 @@ const books  = [
 
    }),
    createBook({
-      id: "crime",
+      id: "crime-and-punishment",
       title: "Crime and Punishment",
       author: [
          "Fyodor Dostoevsky",
@@ -179,7 +179,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "death",
+      id: "the-death-of-ivan-ilyich",
       title: "The Death of Ivan Ilyich",
       author: [
          "Leo Tolstoy",
@@ -191,7 +191,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "divine",
+      id: "the-divine-comedy",
       title: "The Divine Comedy",
       author: [
          "Dante Alighieri",
@@ -204,7 +204,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "don",
+      id: "don-quixote",
       title: "Don Quixote",
       author: [
          "Miguel de Cervantes",
@@ -212,7 +212,7 @@ const books  = [
       description: "Don Quixote becomes convinced that he is a knight from a world of chivalry and sets out with Sancho Panza on a series of humorous and often misguided adventures.",
       mood: [
          "Sad",
-         "Wanderlust ",
+         "Wanderlust",
          "Performative"
       ]
    }),
@@ -241,7 +241,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "epic",
+      id: "the-epic-of-gilgamesh",
       title: "The Epic of Gilgamesh",
       description: "King Gilgamesh seeks power and adventure until the death of his closest companion leads him on a quest to understand friendship, loss, and immortality.",
       mood: [
@@ -251,7 +251,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "federalist",
+      id: "the-federalist-papers",
       title: "The Federalist Papers",
       author: [
          "Alexander Hamilton",
@@ -273,13 +273,13 @@ const books  = [
       description: "Victor Frankenstein creates a living creature through scientific experimentation but abandons it, leading to a tragic conflict between creator and creation.",
       mood: [
          "Life TOO Peaceful",
-         "Escapism ",
+         "Escapism",
 	      "Performative"
       ]
    }),
    createBook({
-      id: "fortunes",
-      title: "The Fortunes and Misfortunes of the Famous Moll Flanders",
+      id: "moll-flanders",
+      title: "Moll Flanders",
       author: [
 	      "Daniel Defoe"
 	   ],
@@ -290,7 +290,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "gambler",
+      id: "the-gambler",
       title: "The Gambler",
       author: [
 	      "Fyodor Dostoevsky"
@@ -302,7 +302,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "garden",
+      id: "the-garden-party",
       title: "The Garden Party and Other Stories",
       author: [
 	      "Katherine Mansfield"
@@ -315,7 +315,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "georgics",
+      id: "the-georgics",
       title: "The Georgics",
       author: [
 	      "Virgil"
@@ -327,7 +327,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "golden",
+      id: "the-golden-ass",
       title: "The Golden Ass",
       author: [
 	      "Apuleius"
@@ -335,12 +335,12 @@ const books  = [
       description: "Lucius is transformed into a donkey after experimenting with magic and experiences a series of comic, dangerous, and unusual adventures before seeking restoration.",
       mood: [
          "Sad",
-         "Escapism ",
+         "Escapism",
 	      "Performative"
       ]
    }),
    createBook({
-      id: "good",
+      id: "the-good-soldier",
       title: "The Good Soldier",
       author: [
 	      "Ford Madox Ford"
@@ -352,7 +352,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "grapes",
+      id: "the-grapes-of-wrath",
       title: "The Grapes of Wrath",
       author: [
 	      "John Steinbeck"
@@ -364,8 +364,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "gullivers",
-      title: "Gulliver’s Travels",
+      id: "gullivers-travels",
+      title: `Gulliver’s Travels`,
       author: [
 	      "Jonathan Swift"
 	   ],
@@ -377,8 +377,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "hunchback",
-      title: "The Hunchback of Notre-Dame",
+      id: "notre-dame-de-paris",
+      title: "Notre Dame de Paris / The Hunchback of Notre-Dame",
       author: [
 	      "Victor Hugo"
 	   ],
@@ -389,7 +389,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "idiot",
+      id: "the-idiot",
       title: "The Idiot",
       author: [
 	      "Fyodor Dostoevsky"
@@ -401,7 +401,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "iliad",
+      id: "the-iliad",
       title: "The Iliad",
       author: [
 	      "Homer"
@@ -409,12 +409,12 @@ const books  = [
       description: "During the Trojan War, the conflict between Achilles and Agamemnon leads to devastating battles that explore honor, rage, heroism, and mortality.",
       mood: [
          "Needed a Caption",
-         "Wrong Era ",
+         "Wrong Era",
 	      "Performative"
       ]
    }),
    createBook({
-      id: "jane",
+      id: "jane-eyre",
       title: "Jane Eyre",
       author: [
 	      "Charlotte Brontë"
@@ -426,18 +426,18 @@ const books  = [
       ]
    }),
    createBook({
-      id: "journey",
+      id: "the-journey-to-the-west",
       title: "The Journey to the West",
       description: "The monk Xuanzang travels to India to obtain sacred Buddhist scriptures, accompanied by companions including the rebellious Monkey King Sun Wukong.",
       mood: [
          "Escapism",
-         "Wanderlust ",
+         "Wanderlust",
 	      "Soul Maintenance"
       ]
    }),
    createBook({
-      id: "jungle",
-      title: "The Jungle",
+      id: "the-jungle-books",
+      title: "The Jungle Books",
       author: [
 	      "Upton Sinclair"
 	   ],
@@ -448,7 +448,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "madame",
+      id: "madame-bovary",
       title: "Madame Bovary",
       author: [
 	      "Gustave Flaubert"
@@ -473,7 +473,7 @@ const books  = [
    }),
    createBook({
       id: "metamorphosis",
-      title: "The Metamorphosis",
+      title: "Metamorphosis and Other Stories",
       author: [
 	      "Franz Kafka"
 	   ],
@@ -497,7 +497,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "mill",
+      id: "the-mill-on-the-floss",
       title: "The Mill on the Floss",
       author: [
 	      "George Eliot"
@@ -509,8 +509,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "moby",
-      title: "Moby-Dick",
+      id: "moby-dick",
+      title: "Moby Dick",
       author: [
 	      "Herman Melville"
 	   ],
@@ -521,7 +521,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "odyssey",
+      id: "the-odyssey",
       title: "The Odyssey",
       author: [
 	      "Homer"
@@ -533,7 +533,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "origin",
+      id: "on-the-origin-of-species",
       title: "On the Origin of Species",
       author: [
 	      "Charles Darwin"
@@ -545,7 +545,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "picture",
+      id: "the-picture-of-dorian-gray",
       title: "The Picture of Dorian Gray",
       author: [
 	      "Oscar Wilde"
@@ -557,7 +557,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "prince",
+      id: "the-prince",
       title: "The Prince",
       author: [
 	      "Niccolò Machiavelli"
@@ -569,7 +569,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "pride",
+      id: "pride-and-prejudice",
       title: "Pride and Prejudice",
       author: [
 	      "Jane Austin"
@@ -581,7 +581,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "republic",
+      id: "the-republic",
       title: "The Republic",
       author: [
 	      "Plato"
@@ -592,7 +592,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "sense",
+      id: "sense-and-sensibility",
       title: "Sense and Sensibility",
       author: [
 	      "Jane Austen"
@@ -604,7 +604,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "symposium",
+      id: "the-symposium",
       title: "The Symposium",
       author: [
 	      "Plato"
@@ -616,7 +616,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "taming",
+      id: "the-taming-of-the-shrew",
       title: "The Taming of the Shrew",
       author: [
 	      "William Shakespeare"
@@ -628,7 +628,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "thus",
+      id: "thus-spoke-zarathustra",
       title: "Thus Spoke Zarathustra",
       author: [
 	      "Friedrich Nietzsche"
@@ -640,7 +640,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "lighthouse",
+      id: "to-the-lighthouse",
       title: "To the Lighthouse",
       author: [
 	      "Virginia Woolf"
@@ -651,8 +651,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "tristram",
-      title: "Tristram Shandy",
+      id: "tristram-shandy",
+      title: "The Life and Opinions of Tristram Shandy, Gentleman",
       author: [
 	      "Laurence Sterne"
 	   ],
@@ -663,7 +663,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "turn",
+      id: "the-turn-of-the-screw",
       title: "The Turn of the Screw",
       author: [
 	      "Henry James"
@@ -675,8 +675,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "walden",
-      title: "Walden",
+      id: "walden-and-civil-disobedience",
+      title: "Walden and Civil Disobedience",
       author: [
 	      "Henry David Thoreau"
 	   ],
@@ -687,7 +687,7 @@ const books  = [
       ],
    }),
    createBook({
-      id: "war",
+      id: "war-and-peace",
       title: "War and Peace",
       author: [
 	      "Leo Tolstoy"
@@ -699,7 +699,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "wuthering",
+      id: "wuthering-heights",
       title: "Wuthering Heights",
       author: [
 	      "Emily Brontë"
@@ -711,7 +711,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "oresteia",
+      id: "the-oresteia",
       title: "The Oresteia",
       author: [
 	      "Aeschylus"
@@ -737,7 +737,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "histories",
+      id: "the-histories",
       title: "The Histories",
       author: [
 	      "Herodotus"
@@ -749,7 +749,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "stoic",
+      id: "letters-from-a-stoic",
       title: "Letters from a Stoic",
       author: [
 	      "Seneca"
@@ -760,8 +760,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "dialogues",
-      title: "Dialogues and Essays",
+      id: "dialogues-and-letters",
+      title: "Dialogues and Letters",
       author: [
 	      "Seneca"
 	   ],
@@ -771,7 +771,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "nature",
+      id: "the-nature-of-things",
       title: "The Nature of Things",
       author: [
 	      "Lucretius"
@@ -783,7 +783,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "caesars",
+      id: "the-twelve-caesars",
       title: "The Twelve Caesars",
       author: [
 	      "Suetonius"
@@ -822,7 +822,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "lear",
+      id: "king-lear",
       title: "King Lear",
       author: [
 	      "William Shakespeare"
@@ -836,7 +836,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "romeo",
+      id: "romeo-and-juliet",
       title: "Romeo and Juliet",
       author: [
 	      "William Shakespeare"
@@ -848,7 +848,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "tempest",
+      id: "the-tempest",
       title: "The Tempest",
       author: [
 	      "William Shakespeare"
@@ -860,7 +860,7 @@ const books  = [
       ],
    }),
    createBook({
-      id: "midsummer",
+      id: "a-midsummer-nights-dream",
       title: "A Midsummer Night's Dream",
       author: [
 	      "William Shakespeare"
@@ -873,7 +873,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "ado",
+      id: "much-ado-about-nothing",
       title: "Much Ado About Nothing",
       author: [
 	      "William Shakespeare"
@@ -886,10 +886,10 @@ const books  = [
       ]
    }),
    createBook({
-      id: "decameron",
+      id: "the-decameron",
       title: "The Decameron",
       author: [
-	      "William Shakespeare"
+	      "Giovanni Boccaccio"
 	   ],
       description: "Ten young people escaping the plague tell one hundred stories about love, fortune, deception, and human nature.",
       mood: [
@@ -898,7 +898,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "proposal",
+      id: "a-modest-proposal",
       title: "A Modest Proposal and Other Writings",
       author: [
 	      "Jonathan Swift"
@@ -923,7 +923,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "contract",
+      id: "the-social-contract",
       title: "The Social Contract",
       author: [
 	      "Jean-Jacques Rousseau"
@@ -934,8 +934,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "inequality",
-      title: "Discourse on Inequality",
+      id: "a-discourse-on-inequality",
+      title: "A Discourse on Inequality",
       author: [
 	      "Jean-Jacques Rousseau"
 	   ],
@@ -945,7 +945,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "politics",
+      id: "the-politics",
       title: "The Politics",
       author: [
 	      "Aristotle"
@@ -980,7 +980,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "north",
+      id: "north-and-south",
       title: "North and South",
       author: [
 	      "Elizabeth Gaskell"
@@ -1004,7 +1004,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "noli",
+      id: "noli-me-tangere",
       title: "Noli Me Tangere",
       author: [
 	      "José Rizal"
@@ -1018,7 +1018,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "fili",
+      id: "el-filibusterismo",
       title: "El Filibusterismo",
       author: [
 	      "José Rizal"
@@ -1032,7 +1032,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "tropical",
+      id: "the-woman-who-had-two-navels",
       title: "The Woman Who Had Two Navels and Tales of the Tropical Gothic",
       author: [
 	      "Nick Joaquín"
@@ -1046,7 +1046,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "america",
+      id: "america-is-in-the-heart",
       title: "America is in the Heart",
       author: [
 	      "Carlos Bulosan"
@@ -1058,7 +1058,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "anna",
+      id: "anna-karenina",
       title: "Anna Karenina",
       author: [
 	      "Leo Tolstoy"
@@ -1070,7 +1070,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "bleak",
+      id: "bleak-house",
       title: "Bleak Hosue",
       author: [
 	      "Charles Dickens"
@@ -1082,7 +1082,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "cousin",
+      id: "cousin-bette",
       title: "Cousin Bette",
       author: [
 	      "Honoré de Balzac"
@@ -1095,7 +1095,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "dangerous",
+      id: "dangerous-liaisons",
       title: "Dangerous Liaisons",
       author: [
 	      "Pierre Choderlos de Laclos"
@@ -1107,7 +1107,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "david",
+      id: "david-copperfield",
       title: "David Copperfield",
       author: [
 	      "Charles Dickens"
@@ -1121,7 +1121,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "dead",
+      id: "dead-souls",
       title: "Dead Souls",
       author: [
 	      "Nikolai Gogol"
@@ -1147,7 +1147,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "eugene",
+      id: "eugene-onegin",
       title: "Eugene Onegin",
       author: [
 	      "Alexander Pushkin"
@@ -1160,7 +1160,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "fathers",
+      id: "fathers-and-sons",
       title: "Fathers and Sons",
       author: [
 	      "Ivan Turgenev"
@@ -1172,7 +1172,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "great",
+      id: "great-expectations",
       title: "Great Expectations",
       author: [
 	      "Charles Dickens"
@@ -1186,7 +1186,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "hard",
+      id: "hard-times",
       title: "Hard Times",
       author: [
 	      "Charles Dickens"
@@ -1200,7 +1200,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "heart",
+      id: "heart-of-darkness",
       title: "Heart of Darkness",
       author: [
 	      "Joseph Conrad"
@@ -1213,8 +1213,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "huckleberry",
-      title: "Huck Finn (The Adventures of Huckleberry Finn)",
+      id: "adventures-of-huckleberry-finn",
+      title: "Adventures of Huckleberry Finn",
       author: [
 	      "Mark Twain"
 	   ],
@@ -1225,7 +1225,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "centre",
+      id: "journey-to-the-centre-of-the-earth",
       title: "Journey to the Centre of the Earth",
       author: [
 	      "Jules Verne"
@@ -1236,7 +1236,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "les",
+      id: "les-miserables",
       title: "Les Miserables",
       author: [
 	      "Victor Hugo"
@@ -1250,7 +1250,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "lost",
+      id: "lost-illusions",
       title: "Lost Illusions",
       author: [
 	      "Honoré de Balzac"
@@ -1264,7 +1264,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "notes",
+      id: "notes-from-the-underground",
       title: "Notes from the Underground",
       author: [
 	      "Fyodor Dosteovsky"
@@ -1276,7 +1276,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "oliver",
+      id: "oliver-twist",
       title: "Oliver Twist",
       author: [
 	      "Charles Dickens"
@@ -1288,7 +1288,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "adventures",
+      id: "the-adventures-of-tom-sawyer",
       title: "The Adventures of Tom Sawyer",
       author: [
 	      "Mark Twain"
@@ -1300,7 +1300,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "innocence",
+      id: "the-age-of-innocence",
       title: "The Age of Innocence",
       author: [
 	      "Edith Wharton"
@@ -1312,7 +1312,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "mirth",
+      id: "the-house-of-mirth",
       title: "The House of Mirth",
       author: [
 	      "Edith Wharton"
@@ -1324,8 +1324,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "moreau",
-      title: "The Island of Doctor Moreau",
+      id: "the-island-of-dr-moreau",
+      title: "The Island of Dr Moreau",
       author: [
 	      "H.G. Wells"
 	   ],
@@ -1336,7 +1336,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "moonstone",
+      id: "the-moonstone",
       title: "The Moonstone",
       author: [
 	      "Wilkie Collins"
@@ -1348,7 +1348,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "phantom",
+      id: "the-phantom-of-the-opera",
       title: "The Phantom of the Opera",
       author: [
 	      "Gaston Leroux"
@@ -1361,7 +1361,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "red",
+      id: "the-red-and-the-black",
       title: "The Red and the Black",
       author: [
 	      "Stendhal"
@@ -1373,7 +1373,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "musketeers",
+      id: "the-three-musketeers",
       title: "The Three Musketeers",
       author: [
 	      "Alexandre Dumas"
@@ -1385,7 +1385,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "time",
+      id: "the-time-machine",
       title: "The Time Machine",
       author: [
 	      "H.G. Wells"
@@ -1399,7 +1399,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "woman",
+      id: "the-woman-in-white",
       title: "The Woman in White",
       author: [
 	      "Wilkie Collins"
@@ -1411,7 +1411,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "imitation",
+      id: "the-imitation-of-christ",
       title: "The Imitation of Christ",
       author: [
 	      "Thomas à Kempis"
@@ -1423,8 +1423,8 @@ const books  = [
       ]
    }),
    createBook({
-      id: "dark",
-      title: "The Dark Night of the Soul",
+      id: "dark-night",
+      title: "Dark Night",
       author: [
 	      "John of the Cross"
 	   ],
@@ -1434,7 +1434,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "sayings",
+      id: "sayings-of-the-early-christian-monks",
       title: "Sayings of the Early Christian Monks",
       description: "A collection of stories and sayings from the Desert Fathers offers wisdom on prayer, humility, repentance, and spiritual discipline.",
       mood: [
@@ -1442,7 +1442,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "benedict",
+      id: "the-rule-of-benedict",
       title: "The Rule of Benedict",
       author: [
 	      "Benedict of Nursia"
@@ -1453,7 +1453,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "philokalia",
+      id: "the-philokalia",
       title: "The Philokalia (A Selection)",
       description: "A collection of writings by Eastern Christian spiritual teachers offers guidance on prayer, virtue, and the pursuit of holiness.",
       mood: [
@@ -1461,7 +1461,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "cloud",
+      id: "the-cloud-of-unknowing",
       title: "The Cloud of Unknowing and Other Works",
       description: "An anonymous writer presents teachings on contemplative prayer and seeking God through love rather than intellectual understanding.",
       mood: [
@@ -1469,7 +1469,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "revelations",
+      id: "revelations-of-divine-love",
       title: "Revelations of Divine Love",
       author: [
 	      "Julian of Norwich"
@@ -1480,7 +1480,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "early",
+      id: "early-christian-writings",
       title: "Early Christian Writings",
       author: [
 	      "Various"
@@ -1492,7 +1492,7 @@ const books  = [
       ]
    }),
    createBook({
-      id: "city",
+      id: "city-of-god",
       title: "City of God",
       author: [
 	      "Augustine of Hippo"

@@ -11,14 +11,15 @@ import { getCover } from '../utils/createBook.js';
 import { saveProfile } from '../storage/localStorage.js';
 
 
-function BookInfo({ author, description, mood, cover }) {
-   const { bookTitle } = useParams();
+function BookInfo({ author, title, description, mood, cover }) {
+   const { bookId } = useParams();
    
    return (
       <div className="flex">
          
          {/* COVER */}
-         <div className="
+         <div 
+            className="
                mt-2 
                pr-20 pl-10
             "
@@ -52,7 +53,7 @@ function BookInfo({ author, description, mood, cover }) {
 
             {/* TITLE */}
             <h1 className="pb-3 text-4xl font-bold">
-               {bookTitle}
+               {title}
             </h1>
 
             {/* AUTHOR */}
@@ -75,12 +76,12 @@ function BookInfo({ author, description, mood, cover }) {
                      <p
                         key={m}
                         className="
-                              w-fit
-                              whitespace-nowrap
-                              bg-black
-                              px-3 py-1 mr-2
-                              text-white
-                           "
+                           w-fit
+                           whitespace-nowrap
+                           bg-black
+                           px-3 py-1 mr-2
+                           text-white
+                        "
                      >
                         {m}
                      </p>
@@ -147,6 +148,7 @@ function BookDetails ({
          <div className="pt-10">
             <BookInfo
                id={currentBook.id}
+               title={currentBook.title}
                author={currentBook.author}
                description={currentBook.description}
                mood={currentBook.mood}
