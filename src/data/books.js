@@ -1,0 +1,1509 @@
+import { createBook } from "../utils/createBook";
+
+
+const books  = [
+   createBook({
+      id: "aenid",
+      title: "The Aeneid",
+      author: [
+         "Virgil",
+      ],
+      description:  "After the destruction of Troy, Aeneas escapes with a group of survivors and journeys across the Mediterranean, facing wars, prophecies, and divine forces on his path to establish a new homeland.",
+      mood: [
+         "Needed a Caption",
+         "Wrong Era",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "analects",
+      title: "The Analects",
+      author: [
+         "Confucius",
+      ],
+      description: "Conversations and teachings attributed to Confucius present lessons on personal conduct, family relationships, education, government, and the cultivation of virtue.",
+      mood: [
+         "Existential Crisis", 
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "arabian",
+      title: "The Arabian Nights: Tales from a Thousand and One Nights",
+      description: "Scheherazade tells a series of interconnected stories to delay her execution, weaving together tales of kings, merchants, adventurers, lovers, and magical beings.",
+      mood: [
+         "Escapism",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "art",
+      title: "The Art of War",
+      author: [
+         "Sun Tzu",
+      ],
+      description: "A collection of strategic teachings explaining how commanders should plan battles, understand opponents, and achieve victory through preparation and intelligence.",
+      mood: [
+         "Existential Crisis",
+         "Wrong Era",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "bhagavad",
+      title: "The Bhagavad Gita",
+      description: "Prince Arjuna struggles with whether he should fight in an approaching war, receiving guidance from Krishna about duty, morality, and spiritual purpose.",
+      mood: [
+         "Soul Maintenance",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "beowulf",
+      title: "Beowulf",
+      description: "The warrior Beowulf travels to Denmark to defeat the monster Grendel, later facing further battles that test his strength, leadership, and legacy.",
+      mood: [
+         "Wanderlust",
+         "Needed a Caption",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "beyond",
+      title: "Beyond Good and Evil",
+      author: [
+         "Friedrich Nietzsche",
+      ],
+      description:"A series of philosophical reflections challenging traditional beliefs about morality, truth, religion, and the ideas people use to define good and evil.",
+      mood: ["Existential Crisis"]
+   }),
+   createBook({
+      id: "brothers",
+      title: "The Brothers Karamazov",
+      author: [
+         "Fyodor Dostoevsky",
+      ],
+      description: "Three brothers with very different beliefs become entangled in family conflict when their father is murdered, forcing them to confront guilt, faith, and responsibility.",
+      mood: [
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "candide",
+      title: "Candide",
+      author: [
+         "Voltaire"
+      ],
+      description:"Candide is expelled from his sheltered life and travels through wars, disasters, and societies around the world while questioning the optimistic philosophy he was taught.",
+      mood: [
+         "Sad",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "canterbury",
+      title: "The Canterbury Tales",
+      author: [
+         "Geoffrey Chaucer",
+      ],
+      description: "A group of pilgrims traveling to Canterbury entertain one another by telling stories about love, deception, morality, religion, and everyday life.",
+      mood: [
+         "Sad",
+         "Needed a Caption",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "castle",
+      title: "The Castle",
+      author: [
+         "Franz Kafka",
+      ],
+      description: "A land surveyor arrives in a village hoping to work for the mysterious Castle authorities but becomes trapped in endless attempts to gain access and recognition.",
+      mood: [
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "communist",
+      title: "The Communist Manifesto",
+      author: [
+         "Karl Marx",
+         "Friedrich Engels",
+      ],
+      description: "Marx and Engels present an argument about class struggle, describing the conflict between workers and ruling classes and calling for revolutionary change.",
+      mood: [
+         "Wrong Era",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "confessions",
+      title: "Confessions",
+      author: [
+         "Augustine of Hippo",
+      ],
+      description: "Augustine recounts his early life, personal struggles, search for truth, and eventual conversion to Christianity through prayer and reflection.",
+      mood: [
+         "Soul Maintenance",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "count",
+      title: "The Count of Monte Cristo",
+      author: [
+         "Alexandre Dumas",
+      ],
+      description: "Edmond Dantès is falsely imprisoned by those who betray him, escapes years later with a new identity, and plans a carefully executed revenge.",
+      mood: [
+         "Wanderlust",
+         "Trust Issues",
+         "Performative"
+      ]
+
+   }),
+   createBook({
+      id: "crime",
+      title: "Crime and Punishment",
+      author: [
+         "Fyodor Dostoevsky",
+      ],
+      description: "Raskolnikov, a struggling former student in St. Petersburg, commits murder and becomes consumed by guilt, fear, and the search for redemption.",
+      mood: [
+         "Trust Issues",
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "death",
+      title: "The Death of Ivan Ilyich",
+      author: [
+         "Leo Tolstoy",
+      ],
+      description: "Ivan Ilyich, a successful government official, faces a painful illness that forces him to reconsider his career, relationships, and the meaning of his life.",
+      mood: [
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "divine",
+      title: "The Divine Comedy",
+      author: [
+         "Dante Alighieri",
+      ],
+      description: "Dante journeys through Hell, Purgatory, and Paradise with the guidance of Virgil and Beatrice, encountering souls who reveal the consequences of human choices.",
+      mood: [
+         "Needed a Caption",
+         "Soul Maintenance",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "don",
+      title: "Don Quixote",
+      author: [
+         "Miguel de Cervantes",
+      ],
+      description: "Don Quixote becomes convinced that he is a knight from a world of chivalry and sets out with Sancho Panza on a series of humorous and often misguided adventures.",
+      mood: [
+         "Sad",
+         "Wanderlust ",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "dracula",
+      title: "Dracula",
+      author: [
+         "Bram Stoker",
+      ],
+      description: "Count Dracula travels from Transylvania to England, where a group of people uncover his supernatural nature and attempt to stop his terrifying plans.",
+      mood: [
+         "Life TOO Peaceful",
+         "Trust Issues",
+      ]
+   }),
+   createBook({
+      id: "emma",
+      title: "Emma",
+      author: [
+         "Jane Austen",
+      ],
+      description: "Emma Woodhouse, a wealthy young woman who enjoys arranging romances for others, gradually learns that her assumptions about love and relationships are often mistaken.",
+      mood: [
+         "Hopelessly Romantic",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "epic",
+      title: "The Epic of Gilgamesh",
+      description: "King Gilgamesh seeks power and adventure until the death of his closest companion leads him on a quest to understand friendship, loss, and immortality.",
+      mood: [
+         "Wanderlust",
+         "Needed a Caption",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "federalist",
+      title: "The Federalist Papers",
+      author: [
+         "Alexander Hamilton",
+         "James Madison",
+         "John Jay"
+      ],
+      description: "A series of essays arguing for the adoption of the United States Constitution, explaining the structure and purpose of the proposed government.",
+      mood: [
+         "Wrong Era",
+         "Existential Crisis",
+      ]
+   }),
+   createBook({
+      id: "frankenstein",
+      title: "Frankenstein",
+      author: [
+	      "Mary Shelley"
+	   ],
+      description: "Victor Frankenstein creates a living creature through scientific experimentation but abandons it, leading to a tragic conflict between creator and creation.",
+      mood: [
+         "Life TOO Peaceful",
+         "Escapism ",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "fortunes",
+      title: "The Fortunes and Misfortunes of the Famous Moll Flanders",
+      author: [
+	      "Daniel Defoe"
+	   ],
+      description: "Moll Flanders recounts her adventurous life of poverty, crime, marriage, and survival while navigating the social realities of eighteenth-century England.",
+      mood: [
+         "Performative",
+         "Wanderlust"
+      ]
+   }),
+   createBook({
+      id: "gambler",
+      title: "The Gambler",
+      author: [
+	      "Fyodor Dostoevsky"
+	   ],
+      description: "Alexei, a young tutor employed by a wealthy Russian family, becomes consumed by gambling while navigating obsession, love, and financial desperation.",
+      mood: [
+         "Performative",
+         "Trust Issues"
+      ]
+   }),
+   createBook({
+      id: "garden",
+      title: "The Garden Party and Other Stories",
+      author: [
+	      "Katherine Mansfield"
+	   ],
+      description: "A collection of short stories portraying ordinary moments, social divisions, personal discoveries, and emotional changes in early twentieth-century life.",
+      mood: [
+         "Performative",
+         "Sad",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "georgics",
+      title: "The Georgics",
+      author: [
+	      "Virgil"
+	   ],
+      description: "Virgil’s agricultural poem explores farming, nature, labor, and humanity’s relationship with the land through myth and philosophical reflection.",
+      mood: [
+         "Needed a Caption",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "golden",
+      title: "The Golden Ass",
+      author: [
+	      "Apuleius"
+	   ],
+      description: "Lucius is transformed into a donkey after experimenting with magic and experiences a series of comic, dangerous, and unusual adventures before seeking restoration.",
+      mood: [
+         "Sad",
+         "Escapism ",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "good",
+      title: "The Good Soldier",
+      author: [
+	      "Ford Madox Ford"
+	   ],
+      description: "A narrator recounts the complicated relationships between two couples, gradually revealing betrayal, deception, and hidden emotional conflicts.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative",
+      ]
+   }),
+   createBook({
+      id: "grapes",
+      title: "The Grapes of Wrath",
+      author: [
+	      "John Steinbeck"
+	   ],
+      description: "The Joad family leaves their drought-stricken Oklahoma farm and travels west toward California, facing poverty, exploitation, and hardship during the Great Depression.",
+      mood: [
+         "Wrong Era",
+         "Performative",
+      ]
+   }),
+   createBook({
+      id: "gullivers",
+      title: "Gulliver’s Travels",
+      author: [
+	      "Jonathan Swift"
+	   ],
+      description: "Lemuel Gulliver travels to strange lands inhabited by unusual societies, using his adventures to satirize politics, science, and human behavior.",
+      mood: [
+         "Sad",
+         "Wanderlust",
+	      "Escapism"
+      ]
+   }),
+   createBook({
+      id: "hunchback",
+      title: "The Hunchback of Notre-Dame",
+      author: [
+	      "Victor Hugo"
+	   ],
+      description: "In medieval Paris, the lives of Quasimodo, Esmeralda, and Archdeacon Frollo become connected through love, obsession, and tragedy.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative",
+      ]
+   }),
+   createBook({
+      id: "idiot",
+      title: "The Idiot",
+      author: [
+	      "Fyodor Dostoevsky"
+	   ],
+      description: "Prince Myshkin returns to Russian society with compassion and innocence but struggles against greed, jealousy, and social corruption.",
+      mood: [
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "iliad",
+      title: "The Iliad",
+      author: [
+	      "Homer"
+	   ],
+      description: "During the Trojan War, the conflict between Achilles and Agamemnon leads to devastating battles that explore honor, rage, heroism, and mortality.",
+      mood: [
+         "Needed a Caption",
+         "Wrong Era ",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "jane",
+      title: "Jane Eyre",
+      author: [
+	      "Charlotte Brontë"
+	   ],
+      description: "Jane Eyre grows from an isolated childhood into an independent woman while facing hardship, love, and the secrets surrounding Thornfield Hall.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative",
+      ]
+   }),
+   createBook({
+      id: "journey",
+      title: "The Journey to the West",
+      description: "The monk Xuanzang travels to India to obtain sacred Buddhist scriptures, accompanied by companions including the rebellious Monkey King Sun Wukong.",
+      mood: [
+         "Escapism",
+         "Wanderlust ",
+	      "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "jungle",
+      title: "The Jungle",
+      author: [
+	      "Upton Sinclair"
+	   ],
+      description: "Jurgis Rudkus and his family immigrate to Chicago seeking a better life but encounter poverty and exploitation in the industrial meatpacking industry.",
+      mood: [
+         "Wrong Era",
+         "Performative",
+      ]
+   }),
+   createBook({
+      id: "madame",
+      title: "Madame Bovary",
+      author: [
+	      "Gustave Flaubert"
+	   ],
+      description: "Emma Bovary searches for excitement beyond her provincial life through romance, luxury, and fantasy, but her desires lead to debt, disappointment, and tragedy.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ],
+   }),
+   createBook({
+      id: "meditations",
+      title: "Meditations",
+      author: [
+	      "Marcus Aurelius"
+	   ],
+      description: "Private reflections written by the Roman emperor explore discipline, self-control, duty, and the practice of accepting life’s challenges.",
+      mood: [
+         "Existential Crisis",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "metamorphosis",
+      title: "The Metamorphosis",
+      author: [
+	      "Franz Kafka"
+	   ],
+      description: "Gregor Samsa wakes one morning transformed into a strange insect-like creature, forcing him and his family to confront isolation, responsibility, and identity.",
+      mood: [
+         "Life TOO Peaceful",
+         "Existential Crisis",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "middlemarch",
+      title: "Middlemarch",
+      author: [
+	      "George Eliot"
+	   ],
+      description: "Set in a provincial English town, the novel intertwines the lives of several characters as they navigate marriage, ambition, politics, and personal growth.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "mill",
+      title: "The Mill on the Floss",
+      author: [
+	      "George Eliot"
+	   ],
+      description: "Maggie Tulliver grows up in rural England struggling between personal desires, family expectations, and the limitations placed on women of her time.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "moby",
+      title: "Moby-Dick",
+      author: [
+	      "Herman Melville"
+	   ],
+      description: "Ishmael joins Captain Ahab’s whaling voyage, where the pursuit of the great white whale becomes an exploration of obsession, fate, and humanity’s struggle against nature.",
+      mood: [
+         "Wanderlust",
+         "Performative",
+      ]
+   }),
+   createBook({
+      id: "odyssey",
+      title: "The Odyssey",
+      author: [
+	      "Homer"
+	   ],
+      description: "Odysseus attempts to return home after the Trojan War, facing mythical creatures, divine interference, and years of hardship before reaching Ithaca.",
+      mood: [
+         "Wanderlust",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "origin",
+      title: "On the Origin of Species",
+      author: [
+	      "Charles Darwin"
+	   ],
+      description: "Darwin presents his theory of evolution by natural selection, explaining how species change over time through adaptation and survival.",
+      mood: [
+         "Wrong Era",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "picture",
+      title: "The Picture of Dorian Gray",
+      author: [
+	      "Oscar Wilde"
+	   ],
+      description: "Dorian Gray remains physically youthful while a hidden portrait reflects the corruption caused by his pursuit of pleasure and selfish desires.",
+      mood: [
+         "Life TOO Peaceful",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "prince",
+      title: "The Prince",
+      author: [
+	      "Niccolò Machiavelli"
+	   ],
+      description: "Machiavelli presents advice to rulers on gaining and maintaining political power through strategy, reputation, and practical decision-making.",
+      mood: [
+         "Existential Crisis",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "pride",
+      title: "Pride and Prejudice",
+      author: [
+	      "Jane Austin"
+	   ],
+      description: "Elizabeth Bennet navigates family pressures, social expectations, and her changing relationship with the wealthy and reserved Mr. Darcy.",
+      mood: [
+         "Hopelessly Romantic",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "republic",
+      title: "The Republic",
+      author: [
+	      "Plato"
+	   ],
+      description: "Through conversations led by Socrates, the dialogue examines justice, politics, education, and the nature of an ideal society.",
+      mood: [
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "sense",
+      title: "Sense and Sensibility",
+      author: [
+	      "Jane Austen"
+	   ],
+      description: "Elinor and Marianne Dashwood experience contrasting approaches to love, relationships, and social expectations while facing financial uncertainty after their family’s loss of fortune.",
+      mood: [
+         "Hopelessly Romantic",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "symposium",
+      title: "The Symposium",
+      author: [
+	      "Plato"
+	   ],
+      description: "Guests at a banquet discuss the meaning of love, beauty, desire, and the pursuit of wisdom through philosophical speeches.",
+      mood: [
+         "Existential Crisis",
+         "Hopelessly Romantic"
+      ]
+   }),
+   createBook({
+      id: "taming",
+      title: "The Taming of the Shrew",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "Petruchio attempts to marry and “tame” the strong-willed Katharina in a comedy about courtship, gender roles, and social expectations.",
+      mood: [
+         "Sad",
+         "Hopelessly Romantic"
+      ]
+   }),
+   createBook({
+      id: "thus",
+      title: "Thus Spoke Zarathustra",
+      author: [
+	      "Friedrich Nietzsche"
+	   ],
+      description: "Zarathustra travels among humanity sharing philosophical teachings about self-overcoming, morality, and the transformation of human values.",
+      mood: [
+         "Existential Crisis",
+         "Needed a Caption"
+      ]
+   }),
+   createBook({
+      id: "lighthouse",
+      title: "To the Lighthouse",
+      author: [
+	      "Virginia Woolf"
+	   ],
+      description: "The Ramsay family’s visits to a Scottish island reveal changing relationships, personal memories, and the passage of time across generations.",
+      mood: [
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "tristram",
+      title: "Tristram Shandy",
+      author: [
+	      "Laurence Sterne"
+	   ],
+      description: "Tristram attempts to tell the story of his life but becomes distracted by countless digressions, creating a playful and unconventional comic narrative.",
+      mood: [
+         "Sad",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "turn",
+      title: "The Turn of the Screw",
+      author: [
+	      "Henry James"
+	   ],
+      description: "A governess caring for two children at a remote estate encounters disturbing events that blur the boundary between supernatural forces and psychological fear.",
+      mood: [
+         "Life TOO Peaceful",
+         "Trust Issues"
+      ]
+   }),
+   createBook({
+      id: "walden",
+      title: "Walden",
+      author: [
+	      "Henry David Thoreau"
+	   ],
+      description: "Thoreau describes his experiment living simply in nature while reflecting on society, independence, work, and personal fulfillment.",
+      mood: [
+         "I Have No Idea",
+         "Existential Crisis"
+      ],
+   }),
+   createBook({
+      id: "war",
+      title: "War and Peace",
+      author: [
+	      "Leo Tolstoy"
+	   ],
+      description: "Several aristocratic families experience love, ambition, and personal transformation during the Napoleonic invasion of Russia.",
+      mood: [
+         "Wrong Era",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "wuthering",
+      title: "Wuthering Heights",
+      author: [
+	      "Emily Brontë"
+	   ],
+      description: "The turbulent relationship between Heathcliff and Catherine shapes generations of families through passion, revenge, and emotional destruction.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "oresteia",
+      title: "The Oresteia",
+      author: [
+	      "Aeschylus"
+	   ],
+      description: "Three connected Greek tragedies follow Agamemnon's family through murder, revenge, and the transformation of justice from personal vengeance to civic law.",
+      mood: [
+         "Performative",
+         "Existential Crisis",
+         "Trust Issues"
+      ]
+   }),
+   createBook({
+      id: "medea",
+      title: "Medea and Other Plays",
+      author: [
+	      "Euripides"
+	   ],
+      description: "Betrayed by her husband, Medea seeks a terrible revenge while other tragedies examine war, suffering, and the power of the gods.",
+      mood: [
+         "Performative",
+         "Sad",
+         "Trust Issues"
+      ]
+   }),
+   createBook({
+      id: "histories",
+      title: "The Histories",
+      author: [
+	      "Herodotus"
+	   ],
+      description: "A sweeping account of the Greco-Persian Wars combines historical events with stories about cultures, rulers, and legendary figures.",
+      mood: [
+         "Wrong Era",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "stoic",
+      title: "Letters from a Stoic",
+      author: [
+	      "Seneca"
+	   ],
+      description: "Philosophical writings explore anger, happiness, fate, mercy, and the pursuit of wisdom.",
+      mood: [
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "dialogues",
+      title: "Dialogues and Essays",
+      author: [
+	      "Seneca"
+	   ],
+      description: "Philosophical writings explore anger, happiness, fate, mercy, and the pursuit of wisdom.",
+      mood: [
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "nature",
+      title: "The Nature of Things",
+      author: [
+	      "Lucretius"
+	   ],
+      description: "An epic poem explains Epicurean philosophy, the natural world, and humanity's place in the universe.",
+      mood: [
+         "Existential Crisis",
+         "Needed a Caption"
+      ]
+   }),
+   createBook({
+      id: "caesars",
+      title: "The Twelve Caesars",
+      author: [
+	      "Suetonius"
+	   ],
+      description: "Biographical portraits of Rome's first emperors reveal their achievements, scandals, and personalities.",
+      mood: [
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "hamlet",
+      title: "Hamlet",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "Prince Hamlet seeks revenge after discovering that his father was murdered, leading to tragedy, betrayal, and philosophical reflection.",
+      mood: [
+         "Performative",
+         "Existential Crisis",
+         "Trust Issues",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "macbeth",
+      title: "Macbeth",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "A Scottish nobleman's ambition and belief in prophecy lead him toward tyranny, guilt, and destruction.",
+      mood: [
+         "Performative",
+         "Trust Issues",
+         "Existential Crisis",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "lear",
+      title: "King Lear",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "An aging king divides his kingdom among his daughters, unleashing betrayal, madness, and family tragedy.",
+      mood: [
+         "Performative",
+         "Trust Issues",
+         "Existential Crisis",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "romeo",
+      title: "Romeo and Juliet",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "Two young lovers from feuding families pursue a forbidden romance with tragic consequences.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "tempest",
+      title: "The Tempest",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "A magician uses his powers to confront betrayal while exploring forgiveness, justice, and reconciliation.",
+      mood: [
+         "Escapism",
+         "Performative"
+      ],
+   }),
+   createBook({
+      id: "midsummer",
+      title: "A Midsummer Night's Dream",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "Lovers, fairies, and mistaken identities create a magical comedy about love and imagination.",
+      mood: [
+         "Sad",
+         "Escapism",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "ado",
+      title: "Much Ado About Nothing",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "Two couples navigate deception, misunderstandings, and romance in one of Shakespeare's most celebrated comedies.",
+      mood: [
+         "Sad",
+         "Hopelessly Romantic",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "decameron",
+      title: "The Decameron",
+      author: [
+	      "William Shakespeare"
+	   ],
+      description: "Ten young people escaping the plague tell one hundred stories about love, fortune, deception, and human nature.",
+      mood: [
+         "Sad",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "proposal",
+      title: "A Modest Proposal and Other Writings",
+      author: [
+	      "Jonathan Swift"
+	   ],
+      description: "Satirical essays expose social inequality, political corruption, and human foolishness through wit and irony.",
+      mood: [
+         "Performative",
+         "Wrong Era",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "leviathan",
+      title: "Leviathan",
+      author: [
+	      "Thomas Hobbes"
+	   ],
+      description: "Hobbes argues that strong government is necessary to prevent conflict and maintain social order.",
+      mood: [
+         "Existential Crisis",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "contract",
+      title: "The Social Contract",
+      author: [
+	      "Jean-Jacques Rousseau"
+	   ],
+      description: "Rousseau explores political freedom and argues that legitimate governments derive authority from the consent of the governed.",
+      mood: [
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "inequality",
+      title: "Discourse on Inequality",
+      author: [
+	      "Jean-Jacques Rousseau"
+	   ],
+      description: "Rousseau examines the origins of inequality and the effects of civilization on human society.",
+      mood: [
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "politics",
+      title: "The Politics",
+      author: [
+	      "Aristotle"
+	   ],
+      description: "Aristotle analyzes different forms of government and the role of citizens in an ideal society.",
+      mood: [
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "discourses",
+      title: "Discourses",
+      author: [
+	      "Epictetus"
+	   ],
+      description: "Practical lessons teach resilience, self-discipline, and focusing only on what lies within one's control.",
+      mood: [
+         "Existential Crisis",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "phaedrus",
+      title: "Phaedrus",
+      author: [
+	      "Plato"
+	   ],
+      description: "Socrates explores love, rhetoric, beauty, and the nature of the soul through philosophical dialogue.",
+      mood: [
+         "Existential Crisis",
+         "Hopelessly Romantic"
+      ]
+   }),
+   createBook({
+      id: "north",
+      title: "North and South",
+      author: [
+	      "Elizabeth Gaskell"
+	   ],
+      description: "A young woman navigates class divisions, industrial conflict, and romance in Victorian England.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "cranford",
+      title: "Cranford / Cousin Phillis",
+      author: [
+	      "Elizabeth Gaskell"
+	   ],
+      description: "A quiet English village is portrayed through humorous and affectionate stories of its people.",
+      mood: [
+         "Performative",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "noli",
+      title: "Noli Me Tangere",
+      author: [
+	      "José Rizal"
+	   ],
+      description: "Crisóstomo Ibarra returns to the Philippines hoping to reform society but encounters corruption, injustice, and the abuses of Spanish colonial rule.",
+      mood: [
+         "Performative",
+         "Wrong Era",
+         "Trust Issues",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "fili",
+      title: "El Filibusterismo",
+      author: [
+	      "José Rizal"
+	   ],
+      description: "Years after the events of Noli Me Tangere, Simoun secretly pursues revenge while exposing the failures of colonial society.",
+      mood: [
+         "Performative",
+         "Wrong Era",
+         "Trust Issues",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "tropical",
+      title: "The Woman Who Had Two Navels and Tales of the Tropical Gothic",
+      author: [
+	      "Nick Joaquín"
+	   ],
+      description: "Stories blending history, memory, identity, and myth explore the complexities of Filipino culture.",
+      mood: [
+         "Performative",
+         "Wrong Era",
+         "Existential Crisis",
+         "Escapism"
+      ]
+   }),
+   createBook({
+      id: "america",
+      title: "America is in the Heart",
+      author: [
+	      "Carlos Bulosan"
+	   ],
+      description: "A Filipino immigrant recounts his experiences with poverty, racism, labor activism, and hope in the United States.",
+      mood: [
+         "Wrong Era",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "anna",
+      title: "Anna Karenina",
+      author: [
+	      "Leo Tolstoy"
+	   ],
+      description: "Anna Karenina enters a passionate relationship that challenges the expectations of Russian society while the lives of several families explore love, marriage, faith, and personal fulfillment.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "bleak",
+      title: "Bleak Hosue",
+      author: [
+	      "Charles Dickens"
+	   ],
+      description: "Multiple lives become connected through a lengthy legal dispute while hidden family secrets, social inequality, and corruption gradually come to light.",
+      mood: [
+         "Performative",
+         "Trust Issues"
+      ]
+   }),
+   createBook({
+      id: "cousin",
+      title: "Cousin Bette",
+      author: [
+	      "Honoré de Balzac"
+	   ],
+      description: "Resentful of her wealthy relatives, Cousin Bette quietly sets in motion a series of schemes that threaten the lives and fortunes of an entire family.",
+      mood: [
+         "Performative",
+         "Trust Issues",
+         "Hopelessly Romantic"
+      ]
+   }),
+   createBook({
+      id: "dangerous",
+      title: "Dangerous Liaisons",
+      author: [
+	      "Pierre Choderlos de Laclos"
+	   ],
+      description: "Two aristocrats manipulate friends and lovers through deception and seduction, turning their private games into destructive consequences.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "david",
+      title: "David Copperfield",
+      author: [
+	      "Charles Dickens"
+	   ],
+      description: "David Copperfield recounts his journey from a difficult childhood to adulthood while discovering friendship, ambition, and his place in the world.",
+      mood: [
+         "Performative",
+         "Sad",
+         "I Have No Idea",
+         "Wanderlust"
+      ]
+   }),
+   createBook({
+      id: "dead",
+      title: "Dead Souls",
+      author: [
+	      "Nikolai Gogol"
+	   ],
+      description: "Chichikov travels across Russia purchasing the legal ownership of deceased serfs as part of an unusual scheme that exposes greed and social corruption.",
+      mood: [
+         "Performative",
+         "Trust Issues",
+         "Wrong Era",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "demons",
+      title: "Demons",
+      author: [
+	      "Fyodor Dostoevsky"
+	   ],
+      description: "A provincial Russian town is shaken by political radicals whose beliefs and ambitions lead to violence, chaos, and moral conflict.",
+      mood: [
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "eugene",
+      title: "Eugene Onegin",
+      author: [
+	      "Alexander Pushkin"
+	   ],
+      description: "A disillusioned nobleman and a thoughtful young woman experience missed opportunities, love, and regret across the changing seasons of their lives.",
+      mood: [
+         "Needed a Caption",
+         "Hopelessly Romantic",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "fathers",
+      title: "Fathers and Sons",
+      author: [
+	      "Ivan Turgenev"
+	   ],
+      description: "A young nihilist returns home with his friend, bringing generational conflict and debates about politics, tradition, and love.",
+      mood: [
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "great",
+      title: "Great Expectations",
+      author: [
+	      "Charles Dickens"
+	   ],
+      description: "Pip, an orphan raised in humble circumstances, unexpectedly gains the opportunity to become a gentleman while discovering the true meaning of wealth, loyalty, and love.",
+      mood: [
+         "Performative",
+         "Sad",
+         "I Have No Idea",
+         "Hopelessly Romantic"
+      ]
+   }),
+   createBook({
+      id: "hard",
+      title: "Hard Times",
+      author: [
+	      "Charles Dickens"
+	   ],
+      description: "The lives of factory workers, teachers, and families reveal the consequences of an education and society built entirely on reason and industry.",
+      mood: [
+         "Performative",
+         "Sad",
+         "Existential Crisis",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "heart",
+      title: "Heart of Darkness",
+      author: [
+	      "Joseph Conrad"
+	   ],
+      description: "Charles Marlow travels deep into central Africa in search of a mysterious ivory trader, confronting imperialism, morality, and the darkness within humanity.",
+      mood: [
+         "Wanderlust",
+         "Existential Crisis",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "huckleberry",
+      title: "Huck Finn (The Adventures of Huckleberry Finn)",
+      author: [
+	      "Mark Twain"
+	   ],
+      description: "Huck Finn escapes down the Mississippi River with an escaped slave, encountering adventure while questioning freedom, friendship, and society's values.",
+      mood: [
+         "Wanderlust",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "centre",
+      title: "Journey to the Centre of the Earth",
+      author: [
+	      "Jules Verne"
+	   ],
+      description: "A professor and his companions follow an ancient clue leading them beneath the Earth's surface, discovering extraordinary worlds along the way.",
+      mood: [
+         "Wanderlust"
+      ]
+   }),
+   createBook({
+      id: "les",
+      title: "Les Miserables",
+      author: [
+	      "Victor Hugo"
+	   ],
+      description: "Former prisoner Jean Valjean seeks redemption while being relentlessly pursued by a determined police inspector during a time of social unrest in France.",
+      mood: [
+         "Performative",
+         "Sad",
+         "Soul Maintenance",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "lost",
+      title: "Lost Illusions",
+      author: [
+	      "Honoré de Balzac"
+	   ],
+      description: "An ambitious young poet leaves his provincial home for Paris, where success, journalism, and society test his ideals and integrity.",
+      mood: [
+         "Performative",
+         "Hopelessly Romantic",
+         "Trust Issues",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "notes",
+      title: "Notes from the Underground",
+      author: [
+	      "Fyodor Dosteovsky"
+	   ],
+      description: "An isolated former civil servant reflects on his life, challenging ideas about reason, free will, and human nature through a series of personal confessions.",
+      mood: [
+         "Existential Crisis",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "oliver",
+      title: "Oliver Twist",
+      author: [
+	      "Charles Dickens"
+	   ],
+      description: "An orphan boy escapes the hardships of the workhouse only to become entangled with criminals while searching for belonging and a better life.",
+      mood: [
+         "Wanderlust",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "adventures",
+      title: "The Adventures of Tom Sawyer",
+      author: [
+	      "Mark Twain"
+	   ],
+      description: "Tom Sawyer fills his childhood with mischievous adventures, friendships, and unexpected dangers along the Mississippi River.",
+      mood: [
+         "Wanderlust",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "innocence",
+      title: "The Age of Innocence",
+      author: [
+	      "Edith Wharton"
+	   ],
+      description: "A respected New York lawyer finds his engagement challenged when an unconventional woman forces him to question duty, love, and social expectations.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "mirth",
+      title: "The House of Mirth",
+      author: [
+	      "Edith Wharton"
+	   ],
+      description: "Lily Bart struggles to maintain her place within New York's wealthy society while balancing love, ambition, and financial insecurity.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "moreau",
+      title: "The Island of Doctor Moreau",
+      author: [
+	      "H.G. Wells"
+	   ],
+      description: "A shipwrecked traveler arrives on a remote island where unsettling scientific experiments raise disturbing questions about humanity and ethics.",
+      mood: [
+         "Life TOO Peaceful",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "moonstone",
+      title: "The Moonstone",
+      author: [
+	      "Wilkie Collins"
+	   ],
+      description: "The disappearance of a priceless diamond draws family members, detectives, and servants into one of literature's earliest detective mysteries.",
+      mood: [
+         "Trust Issues",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "phantom",
+      title: "The Phantom of the Opera",
+      author: [
+	      "Gaston Leroux"
+	   ],
+      description: "A mysterious masked figure haunting the Paris Opera House becomes obsessed with a talented young singer, leading to love, jealousy, and suspense.",
+      mood: [
+         "Life TOO Peaceful",
+         "Hopelessly Romantic",
+	      "Performative"
+      ]
+   }),
+   createBook({
+      id: "red",
+      title: "The Red and the Black",
+      author: [
+	      "Stendhal"
+	   ],
+      description: "Julien Sorel attempts to rise above his humble origins through ambition, romance, and calculated social advancement in post-Napoleonic France.",
+      mood: [
+         "Hopelessly Romantic",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "musketeers",
+      title: "The Three Musketeers",
+      author: [
+	      "Alexandre Dumas"
+	   ],
+      description: "A young swordsman joins three legendary musketeers in adventures involving loyalty, political intrigue, and daring exploits across France.",
+      mood: [
+         "Wanderlust",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "time",
+      title: "The Time Machine",
+      author: [
+	      "H.G. Wells"
+	   ],
+      description: "An inventor travels far into Earth's future, encountering distant civilizations that reshape his understanding of humanity's destiny.",
+      mood: [
+         "Performative",
+         "Wanderlust",
+         "Escapism",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "woman",
+      title: "The Woman in White",
+      author: [
+	      "Wilkie Collins"
+	   ],
+      description: "A chance encounter with a mysterious woman draws a young art teacher into a web of secrets, mistaken identities, and conspiracy.",
+      mood: [
+         "Trust Issues",
+         "Performative"
+      ]
+   }),
+   createBook({
+      id: "imitation",
+      title: "The Imitation of Christ",
+      author: [
+	      "Thomas à Kempis"
+	   ],
+      description: "A collection of reflections encourages readers to pursue humility, prayer, self-denial, and a closer relationship with Christ through everyday life.",
+      mood: [
+         "Soul Maintenance",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "dark",
+      title: "The Dark Night of the Soul",
+      author: [
+	      "John of the Cross"
+	   ],
+      description: "John of the Cross reflects on the spiritual struggles believers experience as they grow closer to God.",
+      mood: [
+         "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "sayings",
+      title: "Sayings of the Early Christian Monks",
+      description: "A collection of stories and sayings from the Desert Fathers offers wisdom on prayer, humility, repentance, and spiritual discipline.",
+      mood: [
+         "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "benedict",
+      title: "The Rule of Benedict",
+      author: [
+	      "Benedict of Nursia"
+	   ],
+      description: "Benedict sets out guidelines for monastic life centered on prayer, work, obedience, humility, and community.",
+      mood: [
+         "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "philokalia",
+      title: "The Philokalia (A Selection)",
+      description: "A collection of writings by Eastern Christian spiritual teachers offers guidance on prayer, virtue, and the pursuit of holiness.",
+      mood: [
+         "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "cloud",
+      title: "The Cloud of Unknowing and Other Works",
+      description: "An anonymous writer presents teachings on contemplative prayer and seeking God through love rather than intellectual understanding.",
+      mood: [
+         "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "revelations",
+      title: "Revelations of Divine Love",
+      author: [
+	      "Julian of Norwich"
+	   ],
+      description: "Julian of Norwich recounts a series of visions reflecting on God's love, mercy, and hope in the midst of suffering.",
+      mood: [
+         "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "early",
+      title: "Early Christian Writings",
+      author: [
+	      "Various"
+	   ],
+      description: "Letters, sermons, and other early Christian writings offer instruction on faith, worship, Church leadership, and Christian living.",
+      mood: [
+         "Soul Maintenance",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "city",
+      title: "City of God",
+      author: [
+	      "Augustine of Hippo"
+	   ],
+      description: "Augustine contrasts the earthly city with the City of God while examining history, politics, human nature, and the Christian hope.",
+      mood: [
+         "Soul Maintenance",
+         "Existential Crisis"
+      ]
+   })
+]
+
+
+export default books;
