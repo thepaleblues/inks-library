@@ -11,6 +11,29 @@ import books from '../data/books.js';
 import NoResults from '../components/NoResults.jsx';
 import BookCard from '../components/BookCard.jsx';
 
+function BackToTopBtn({ visible, onClick }) {
+   if (!visible) return null;
+
+   return (
+      <div className="fixed right-5 top-1/2 z-50 -translate-y-1/2">
+         <button
+            type="button"
+            onClick={onClick}
+            className="
+               rounded-full
+               bg-black text-white
+               px-3 py-3
+               shadow-lg
+               hover:bg-stone-700
+               transition
+               text-sm
+            "
+         >
+            ↑
+         </button>
+      </div>
+   );
+}
 
 function Filters({ 
    handleFilterChange,
@@ -18,7 +41,8 @@ function Filters({
 }) {
    return (
       <div className="filter-container">
-         <ul className=" 
+         <ul 
+            className=" 
                grid
                gap-2
                w-full
@@ -66,21 +90,25 @@ export function DisplayBooks({
    setCurrentBook
 }) {
    return (
-      <div className="
-         grid 
-         grid-cols-1 
-         sm:grid-cols-2 
-         lg:grid-cols-3 
-         xl:grid-cols-4 
-         gap-4 min-w-0
-      ">
+      <div 
+         className="
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3 
+            xl:grid-cols-4 
+            gap-4 min-w-0
+         "
+      >
          {
             bookResults.sort((a, b) => {
                const slice = (title) => {
-                  return title.toLowerCase().startsWith("The ") ? title.slice(4) : 
-                           title.toLowerCase().startsWith("A ") ? title.slice(2) : 
-                           title
-               }
+                  return title.toLowerCase().startsWith("The ") 
+                     ? title.slice(4) 
+                     : title.toLowerCase().startsWith("A ") 
+                     ? title.slice(2) 
+                     : title
+               };
    
                const titleA = slice(a.title.toLowerCase());
                const titleB = slice(b.title.toLowerCase());
@@ -114,6 +142,7 @@ function Library({
    setFilters,
    setCurrentPage
 }) {
+
    useEffect(() => {
       setCurrentPage("/library");
       localStorage.setItem("current-page", "/library");
@@ -151,14 +180,38 @@ function Library({
       sessionStorage.setItem("library-filters", JSON.stringify(filters));
    }, [filters]);
 
+   
+   // BACK TO TOP BTN
+   const [showBackToTop, setShowBackToTop] = useState(false);
+
+   useEffect(() => {
+      const onScroll = () => {
+         setShowBackToTop(window.scrollY > 2500);
+      };
+
+      onScroll();
+      window.addEventListener("scroll", onScroll);
+
+      return () => window.removeEventListener("scroll", onScroll);
+   }, []);
+
+   const scrollToTop = () => {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth"
+      });
+   };
+
    return (
-      <div className="
+      <div 
+         className="
             w-full
             px-30 pt-20 pb-60      
             bg-grey-gradient 
          "
       >
-         <div className="
+         <div 
+            className="
                flex items-center justify-between
             "
          >
@@ -176,6 +229,9 @@ function Library({
                   type="search"
                   placeholder="...or you can search"
                   value={filters.search}
+                  onChange={(e) => {
+                     handleFilterChange("search", e.target.value);
+                  }}
                   className="
                      w-60
                      p-3
@@ -184,9 +240,6 @@ function Library({
                      rounded-2xl 
                      focus:outline-none
                   "
-                  onChange={(e) => {
-                     handleFilterChange("search", e.target.value);
-                  }}
                />
                {filters.search && (
                   <button
@@ -235,6 +288,11 @@ function Library({
                </div>
             )
          }
+         {/* BACK TO TOP */}
+         <BackToTopBtn 
+            visible={showBackToTop}
+            onClick={scrollToTop}
+         />
       </div>  
    ); 
 }
