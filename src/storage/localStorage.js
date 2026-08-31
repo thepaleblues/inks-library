@@ -7,7 +7,6 @@ export function checkFirstVisit() {
   return isNewUser;
 }
 
-
 // PROFILE
 const PROFILE_KEY = "inks-library-profile";
 
@@ -28,3 +27,6 @@ export function loadProfile(defaultProfile) {
 
   return JSON.parse(saved);
 }
+
+// LIBRARY
+export const LIBRARY_SCROLL_KEY = "library-scroll";

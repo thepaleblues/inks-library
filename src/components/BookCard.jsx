@@ -1,18 +1,33 @@
 import { Link } from 'react-router-dom'
 
 import { getCover } from '../utils/createBook'
+import { LIBRARY_SCROLL_KEY } from '../storage/localStorage';
 
 
 function BookCard({
-  book,
-  title,
-  author,
-  setCurrentBook
+   book,
+   id,
+   title,
+   author,
+   setCurrentBook
 }) {
    return (
       <Link
-         to={`/book-details/${book.title}`}
-         onClick={() => setCurrentBook(book)}
+         to={`/book-details/${id}`}
+         onClick={() => {
+            sessionStorage.setItem(
+               LIBRARY_SCROLL_KEY,
+               window.scrollY.toString()
+            );
+
+            sessionStorage.setItem(
+               "library-return",
+               "book-details"
+            );
+
+            setCurrentBook(book);
+         }}
+
          className="
             group 
             block 
@@ -20,7 +35,8 @@ function BookCard({
             mx-auto my-5
          "
       >
-         <div className="
+         <div 
+            className="
                border-2 border-transparent
                bg-white
                group-hover:shadow-2xl

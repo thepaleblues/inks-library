@@ -11,6 +11,7 @@ import books from '../data/books.js';
 import NoResults from '../components/NoResults.jsx';
 import BookCard from '../components/BookCard.jsx';
 
+
 function BackToTopBtn({ visible, onClick }) {
    if (!visible) return null;
 
@@ -120,6 +121,7 @@ export function DisplayBooks({
                   <BookCard
                      book={book}
                      key={book.id}
+                     id={book.id}
                      title={book.title}
                      author={
                         book.author.length > 1
@@ -139,14 +141,8 @@ function Library({
    currentBook,
    setCurrentBook,
    filters,
-   setFilters,
-   setCurrentPage
+   setFilters
 }) {
-
-   useEffect(() => {
-      setCurrentPage("/library");
-      localStorage.setItem("current-page", "/library");
-   }, [setCurrentPage]);
 
    const [bookResults, setBookResults] = useState([]);
 
@@ -176,11 +172,11 @@ function Library({
       setBookResults(filteredBooks);
    }, [filters.mood, filters.search]);
 
+   // SAVE FILTERS
    useEffect(() => {
       sessionStorage.setItem("library-filters", JSON.stringify(filters));
    }, [filters]);
 
-   
    // BACK TO TOP BTN
    const [showBackToTop, setShowBackToTop] = useState(false);
 

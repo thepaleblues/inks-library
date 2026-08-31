@@ -4,6 +4,7 @@ import {
   BrowserRouter,
   Route,
   Routes,
+  useLocation
 } from 'react-router-dom';
 
 import './index.css';
@@ -17,6 +18,57 @@ import About from './components/About.jsx';
 
 import readProfile from './data/readProfile.js';
 import { checkFirstVisit, loadProfile } from './storage/localStorage.js';
+import { LIBRARY_SCROLL_KEY } from './storage/localStorage.js';
+
+
+function ChangePagesLogic({ setFilters }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+
+    const onLibrary = path === "/library";
+    const onBookDetails = path.startsWith("/book-details");
+
+    if (onLibrary) {
+      const cameFromBookDetails =
+        sessionStorage.getItem("library-return") === "book-details";
+
+      const savedScroll =
+        sessionStorage.getItem(LIBRARY_SCROLL_KEY);
+
+      if (cameFromBookDetails && savedScroll !== null) {
+        requestAnimationFrame(() => {
+          window.scrollTo(0, Number(savedScroll));
+      });
+
+        sessionStorage.removeItem("library-return");
+        sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
+      }
+
+      return;
+    }
+
+    if (onBookDetails) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    sessionStorage.removeItem("library-return");
+    sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
+
+    window.scrollTo(0, 0);
+
+    setFilters({
+      search: "",
+      mood: "",
+    });
+
+  }, [location.pathname, setFilters]);
+
+  return null;
+}
+
 
 
 function App() {
@@ -41,38 +93,23 @@ function App() {
     }
   });
   
-  const [currentPage, setCurrentPage] = useState(() => {
-    return localStorage.getItem("current-page") || "/";
-  });
-
   useEffect(() => {
     localStorage.setItem("hasVisited", "true");
   }, []);
 
-  useEffect(() => {
-    if (currentPage === "/") {
-      setFilters({
-        search: ``,
-        mood: ``
-      })
-    }
-    sessionStorage.removeItem("library-filters");
-  }, [currentPage])
-  
-  useEffect(() => {
-    console.log(`top moods:`, topMoods)
-  }, [topMoods])
 
   return (
     <BrowserRouter>
       <Navbar />
+      <ChangePagesLogic 
+        setFilters={setFilters} 
+      />
       <div className="bg-white">
         <Routes>
           <Route 
             path="/" 
             element={<Home 
               isNewUser={isNewUser}
-              setCurrentPage={setCurrentPage}
               currentBook={currentBook}
               setCurrentBook={setCurrentBook}
               moodScorePoints={moodScorePoints}
@@ -82,9 +119,7 @@ function App() {
           <Route 
             path="/library" 
             element={
-            <Library 
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
+            <Library
               filters={filters}
               setFilters={setFilters}
               currentBook={currentBook}
@@ -105,13 +140,13 @@ function App() {
           />
           <Route 
             path="/about" 
-            element={<About/>} 
+            element={<About />} 
           />
         </Routes>
       </div>
       <Footer />
     </BrowserRouter>
-  )
+  );
 }
 
 
