@@ -9,11 +9,10 @@ import '../index.css';
 
 import { getCover } from '../utils/createBook.js';
 import { saveProfile } from '../storage/localStorage.js';
+import books from '../data/books.js';
 
 
 function BookInfo({ author, title, description, mood, cover }) {
-   const { bookId } = useParams();
-   
    return (
       <div className="flex flex-col gap-8 md:flex-row md:gap-0">
          
@@ -100,23 +99,26 @@ function BookInfo({ author, title, description, mood, cover }) {
 }
 
 function BookDetails ({    
-   currentBook,
    setViewedBook,
    setMoodScorePoints,
    profile,
    setProfile
 }) {
-   useEffect(() => {
-      if (!currentBook) return;
 
-      if (profile.viewedBooks.includes(currentBook.id)) {
+   const { bookId } = useParams();
+   const book = books.find((book) => book.id === bookId);
+
+   useEffect(() => {
+      if (!book) return;
+
+      if (profile.viewedBooks.includes(book)) {
          return;
       }
-
+      
       const updatedProfile = {
-         viewedBooks: [...profile.viewedBooks, currentBook.id],
+         viewedBooks: [...profile.viewedBooks, book],
          moodScore: profile.moodScore.map((mood) => {
-            if (currentBook.mood.includes(mood.id)) {
+            if (book.mood.includes(mood.id)) {
                return { ...mood, points: mood.points + 1 };
             }
             return { ...mood };
@@ -128,7 +130,7 @@ function BookDetails ({
       setMoodScorePoints(updatedProfile.moodScore);
       setProfile(updatedProfile);
 
-   }, [currentBook, 
+   }, [book, 
       profile, 
       setViewedBook, 
       setMoodScorePoints, 
@@ -148,12 +150,12 @@ function BookDetails ({
       >
          <div className="pt-6 sm:pt-8 md:pt-30">
             <BookInfo
-               id={currentBook.id}
-               title={currentBook.title}
-               author={currentBook.author}
-               description={currentBook.description}
-               mood={currentBook.mood}
-               cover={currentBook.id}
+               id={book.id}
+               title={book.title}
+               author={book.author}
+               description={book.description}
+               mood={book.mood}
+               cover={book.id}
             />
          </div>
       </div>
