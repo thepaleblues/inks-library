@@ -47,7 +47,7 @@ function Filters({
                grid
                gap-2
                w-full
-               grid-cols-1
+               grid-cols-2
                sm:grid-cols-2
                md:grid-cols-3
                lg:grid-cols-4
@@ -94,7 +94,7 @@ export function DisplayBooks({
       <div 
          className="
             grid 
-            grid-cols-1 
+            grid-cols-1
             sm:grid-cols-2 
             lg:grid-cols-3 
             xl:grid-cols-4 
@@ -206,35 +206,34 @@ function Library({
             bg-grey-gradient 
          "
       >
-         <div 
-            className="
-               flex items-center justify-between
-            "
-         >
-            <h3 className="py-10 pt-20 font-bold">
+         <div className="flex items-center gap-4">
+            <h3 
+               className="
+                  min-w-0 flex-1
+                  py-10 pt-20
+                  text-2xl font-bold
+                  sm:text-3xl
+               "
+            >
                {dialogues.defaults.moodFilter}
             </h3>
             
             {/* SEARCH */}
-            <div className="
-                  relative 
-                  mt-10 ml-2
-               "
-            >
+            <div className="relative mt-10 shrink-0">
                <input
                   type="search"
-                  placeholder="...or you can search"
+                  placeholder="...or search"
                   value={filters.search}
                   onChange={(e) => {
                      handleFilterChange("search", e.target.value);
                   }}
                   className="
-                     w-60
-                     p-3
+                     w-36 p-3
                      text-center
                      bg-black/10
-                     rounded-2xl 
+                     rounded-2xl
                      focus:outline-none
+                     sm:w-60
                   "
                />
                {filters.search && (

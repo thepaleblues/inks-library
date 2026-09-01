@@ -67,7 +67,7 @@ function RecoBooks({ booksToReco, setCurrentBook}) {
             gap-4
             grid-cols-1 
             sm:grid-cols-2 
-            lg:grid-cols-3 
+            lg:grid-cols-3
          "
       >
          {booksToReco.map(book => 
@@ -75,6 +75,7 @@ function RecoBooks({ booksToReco, setCurrentBook}) {
                <BookCard
                   book={book}
                   key={book.id}
+                  id={book.id}
                   title={book.title}
                   author={
                      book.author.length > 1
@@ -96,8 +97,8 @@ function Recommendations({ topMoods, setCurrentBook, booksToReco }) {
    const firstGroup = moodAndGenre.find(group => group.mood === firstMood?.id);
    const secondGroup = moodAndGenre.find(group => group.mood === secondMood?.id);
 
-   const firstAlter = firstGroup.alter;
-   const secondAlter = secondGroup.alter;
+   const firstAlter = firstGroup?.alter;
+   const secondAlter = secondGroup?.alter;
 
    const firstMoodBooks = books.filter(book => book.mood.includes(firstMood.id));
    const secondMoodBooks = books.filter(book => book.mood.includes(secondMood.id));
@@ -115,19 +116,21 @@ function Recommendations({ topMoods, setCurrentBook, booksToReco }) {
    );
 
    return (
-      <div className="
-            pt-10 pb-30 px-60 
-            bg-grey-gradient 
+      <div 
+         className="
+            pt-20 pb-20 px-5
+            sm:px-8 lg:px-20 xl:px-60
+            bg-grey-gradient
          "
       >
          <div className="w-full">
             
             {/* FIRST RECO */}
-            <div className="pb-45"> 
+            <div className="pb-40"> 
                   <div className="pb-15">
-                     <h1 className="pt-40 text-center">
+                     <h1 className="pt-16 text-center sm:pt-40">
                         {dialogues.reco.firstBook}
-                        {firstAlter.toLowerCase()}.
+                        {firstAlter?.toLowerCase()}.
                      </h1>
 
                      <p className="pt-5 text-center">
@@ -144,18 +147,20 @@ function Recommendations({ topMoods, setCurrentBook, booksToReco }) {
 
             {/* SECOND RECO */}
             <div className="pb-40">
-               <div className="
-                     flex justify-center
-                     pt-20 pb-15 
+               <div 
+                  className="
+                     flex flex-col items-center justify-center
+                     pt-12 pb-10
+                     sm:flex-row sm:pt-20 sm:pb-15
                   "
                >
                   <img 
                      src={inksDesigns.neutral.image} 
                      className="max-h-20"
                   />
-                  <h1 className="pt-5 pl-5 font-bold">
+                  <h1 className="pt-3 text-center sm:pt-5 sm:pl-5">
                      {dialogues.reco.suggestionLine}
-                     {secondAlter.toLowerCase()} ?
+                     {secondAlter?.toLowerCase()} ?
                   </h1>
                </div>
                

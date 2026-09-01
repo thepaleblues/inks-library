@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 import inksDesigns from '../ink/designs'
 
 
@@ -21,7 +23,7 @@ function About() {
       <div className="
             flex flex-col items-center
             min-h-dvh
-            pt-20 px-60
+            px-5 pt-20 sm:px-8 lg:px-20 xl:px-60
             text-center
             bg-grey-gradient
          "
@@ -37,7 +39,7 @@ function About() {
             </img>
          </div>
 
-         <div className="pl-5 pt-10"> 
+         <div className="w-full pt-10">
             
             {/* INTRO */}
             <div className="pb-15">
@@ -45,18 +47,20 @@ function About() {
                   Not sure what classic to read next?
                </h2>
 
-               <p className="px-20">
+               <p className="mx-auto max-w-2xl">
                   Ink is a curated guide to Penguin Classics, made for readers who are exploring classic literature and don't know where to start.
                </p>
             </div>
             
             {/* HOW */}
             <h2 className="pb-2">How it works</h2>
-            <div className="
-                  flex flex-cols-1
+            <div 
+               className="
+                  flex flex-col
                   w-full
                   gap-5
-                  pt-5
+                  pt-5 pb-20
+                  sm:flex-row
                "
             >
                <How 

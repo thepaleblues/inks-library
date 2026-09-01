@@ -39,8 +39,9 @@ function BookCard({
             className="
                border-2 border-transparent
                bg-white
-               group-hover:shadow-2xl
-               transition-shadow duration-300
+               group-hover:shadow-2xl group-hover:-translate-y-1
+               transition duration-200
+               
             "
          >
          <div

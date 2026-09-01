@@ -15,13 +15,13 @@ function BookInfo({ author, title, description, mood, cover }) {
    const { bookId } = useParams();
    
    return (
-      <div className="flex">
+      <div className="flex flex-col gap-8 md:flex-row md:gap-0">
          
          {/* COVER */}
          <div 
             className="
-               mt-2 
-               pr-20 pl-10
+               mt-2 w-full
+               md:w-auto md:pr-20 md:pl-10
             "
          >
             <Link
@@ -41,7 +41,8 @@ function BookInfo({ author, title, description, mood, cover }) {
             <img 
                src={getCover(cover)} 
                className="
-                  max-w-80 
+                  max-w-70
+                  md:max-w-86
                   border border-gray-200
                   shadow-2xl
                "
@@ -49,10 +50,10 @@ function BookInfo({ author, title, description, mood, cover }) {
          </div>
 
          {/* BOOK INFO */}
-         <div className="pt-30">
+         <div className="pt-10 md:pt-30">
 
             {/* TITLE */}
-            <h1 className="pb-3 text-4xl font-bold">
+            <h1 className="pb-3 text-3xl font-bold sm:text-4xl">
                {title}
             </h1>
 
@@ -71,7 +72,7 @@ function BookInfo({ author, title, description, mood, cover }) {
 
             <div className="other-info">
                {/* MOOD */}
-               <div className="flex">
+               <div className="flex flex-wrap gap-2">
                   {mood.map(m => 
                      <p
                         key={m}
@@ -79,7 +80,7 @@ function BookInfo({ author, title, description, mood, cover }) {
                            w-fit
                            whitespace-nowrap
                            bg-black
-                           px-3 py-1 mr-2
+                           px-3 py-1
                            text-white
                         "
                      >
@@ -89,7 +90,7 @@ function BookInfo({ author, title, description, mood, cover }) {
                </div>
 
                {/* DESCRIPTION */}
-               <p className="pb-20 pt-10 pr-10">
+               <p className="pb-20 pt-10 md:pr-10">
                   {description}
                </p>
             </div>
@@ -137,7 +138,7 @@ function BookDetails ({
    return (
       <div className="
             bg-white
-            px-5 pt-30 pb-70 
+            px-5  w-full min-h-dvh
             sm:px-8 
             md:px-12 
             lg:px-34 
@@ -145,7 +146,7 @@ function BookDetails ({
             2xl:px-90
          "
       >
-         <div className="pt-10">
+         <div className="pt-6 sm:pt-8 md:pt-30">
             <BookInfo
                id={currentBook.id}
                title={currentBook.title}
