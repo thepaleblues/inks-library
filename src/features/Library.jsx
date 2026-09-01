@@ -10,6 +10,7 @@ import dialogues from '../ink/dialogues.js'
 import books from '../data/books.js';
 import NoResults from '../components/NoResults.jsx';
 import BookCard from '../components/BookCard.jsx';
+import { LIBRARY_SCROLL_KEY } from '../storage/localStorage.js';
 
 
 function BackToTopBtn({ visible, onClick }) {
@@ -128,7 +129,8 @@ export function DisplayBooks({
                            ? `${book.author[0]} et al.`
                            : book.author[0]
                      }
-                     setCurrentBook={setCurrentBook}
+                     setCurrentBook={setCurrentBook}   
+                     scrollKey={LIBRARY_SCROLL_KEY}  
                   />
                )
             })

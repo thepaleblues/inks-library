@@ -28,5 +28,6 @@ export function loadProfile(defaultProfile) {
   return JSON.parse(saved);
 }
 
-// LIBRARY
+// SCROLLING
 export const LIBRARY_SCROLL_KEY = "library-scroll";
+export const HOME_SCROLL_KEY = "home-scroll";

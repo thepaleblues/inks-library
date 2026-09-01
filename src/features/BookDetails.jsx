@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 
 import { 
    Link, 
-   useParams 
+   useParams,
+   useLocation
 } from 'react-router-dom';
 
 import '../index.css';
@@ -12,7 +13,16 @@ import { saveProfile } from '../storage/localStorage.js';
 import books from '../data/books.js';
 
 
-function BookInfo({ author, title, description, mood, cover }) {
+function BookInfo({ 
+   author, 
+   title, 
+   description, 
+   mood, 
+   cover 
+}) {
+   const location = useLocation();
+   const previousPage = location.state?.from
+
    return (
       <div className="flex flex-col gap-8 md:flex-row md:gap-0">
          
@@ -24,7 +34,7 @@ function BookInfo({ author, title, description, mood, cover }) {
             "
          >
             <Link
-               to="/library"
+               to={previousPage}
                className="
                   inline-block
                   mb-10 px-3 py-2

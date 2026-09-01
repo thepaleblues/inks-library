@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import { getCover } from '../utils/createBook'
-import { LIBRARY_SCROLL_KEY } from '../storage/localStorage';
+import { LIBRARY_SCROLL_KEY, HOME_SCROLL_KEY } from '../storage/localStorage';
 
 
 function BookCard({
@@ -9,23 +9,25 @@ function BookCard({
    id,
    title,
    author,
-   setCurrentBook
+   setCurrentBook,
+   scrollKey
 }) {
    return (
       <Link
          to={`/book-details/${id}`}
+         state={{ from: location.pathname }}
          onClick={() => {
-            sessionStorage.setItem(
-               LIBRARY_SCROLL_KEY,
-               window.scrollY.toString()
-            );
+            setCurrentBook(book);
 
             sessionStorage.setItem(
-               "library-return",
+               "page-return",
                "book-details"
             );
 
-            setCurrentBook(book);
+            if (scrollKey) {
+               sessionStorage.setItem(scrollKey, window.scrollY.toString());
+               sessionStorage.setItem("page-return", "book-details");
+            }
          }}
 
          className="

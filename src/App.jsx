@@ -17,8 +17,12 @@ import Footer from './components/Footer.jsx';
 import About from './components/About.jsx';
 
 import readProfile from './data/readProfile.js';
-import { checkFirstVisit, loadProfile } from './storage/localStorage.js';
-import { LIBRARY_SCROLL_KEY } from './storage/localStorage.js';
+import { 
+  checkFirstVisit,  
+  loadProfile, 
+  LIBRARY_SCROLL_KEY, 
+  HOME_SCROLL_KEY
+} from './storage/localStorage.js';
 
 
 function ChangePagesLogic({ setFilters }) {
@@ -26,26 +30,41 @@ function ChangePagesLogic({ setFilters }) {
 
   useEffect(() => {
     const path = location.pathname;
-
     const onLibrary = path === "/library";
+    const onHome = path === "/";
     const onBookDetails = path.startsWith("/book-details");
 
-    if (onLibrary) {
-      const cameFromBookDetails =
-        sessionStorage.getItem("library-return") === "book-details";
+    const restoreScroll = (scrollKey) => {
+      const returningFromDetails =
+        sessionStorage.getItem("page-return") === "book-details";
+      const savedScroll = sessionStorage.getItem(scrollKey);
 
-      const savedScroll =
-        sessionStorage.getItem(LIBRARY_SCROLL_KEY);
+      if (!returningFromDetails || savedScroll === null) return false;
 
-      if (cameFromBookDetails && savedScroll !== null) {
-        requestAnimationFrame(() => {
-          window.scrollTo(0, Number(savedScroll));
+      requestAnimationFrame(() => {
+        window.scrollTo(0, Number(savedScroll));
       });
 
-        sessionStorage.removeItem("library-return");
-        sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
-      }
+      sessionStorage.removeItem("page-return");
+      sessionStorage.removeItem(scrollKey);
+      return true;
+    };
 
+    if (onLibrary) {
+      sessionStorage.removeItem(HOME_SCROLL_KEY);
+
+      if (!restoreScroll(LIBRARY_SCROLL_KEY)) {
+        window.scrollTo(0, 0);
+      }
+      return;
+    }
+
+    if (onHome) {
+      sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
+
+      if (!restoreScroll(HOME_SCROLL_KEY)) {
+        window.scrollTo(0, 0);
+      }
       return;
     }
 
@@ -54,8 +73,9 @@ function ChangePagesLogic({ setFilters }) {
       return;
     }
 
-    sessionStorage.removeItem("library-return");
+    sessionStorage.removeItem("page-return");
     sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
+    sessionStorage.removeItem(HOME_SCROLL_KEY);
 
     window.scrollTo(0, 0);
 
@@ -63,13 +83,10 @@ function ChangePagesLogic({ setFilters }) {
       search: "",
       mood: "",
     });
-
   }, [location.pathname, setFilters]);
 
   return null;
 }
-
-
 
 function App() {
   const [isNewUser, setIsNewUser] = useState(() => checkFirstVisit());
@@ -96,7 +113,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("hasVisited", "true");
   }, []);
-
 
   return (
     <BrowserRouter>
