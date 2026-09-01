@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import '../index.css';
 
 import Recommendations from '../ink/Recommendations.jsx';
@@ -41,10 +39,11 @@ function Home({
    setCurrentBook,
    isNewUser
 }) {
-   return (
+
+   return (      
       <div>
          {
-            isNewUser ? (
+            isNewUser || topMoods.length.points === 0 ?  (
                <Hero 
                   firstLine="Welcome to my library."
                   secondLine="Try not to mess with my shelves."
