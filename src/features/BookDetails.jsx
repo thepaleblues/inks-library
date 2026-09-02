@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { 
    Link, 
    useParams,
-   useLocation
+   useLocation,
+   Navigate
 } from 'react-router-dom';
 
 import '../index.css';
@@ -118,9 +119,11 @@ function BookDetails ({
    const { bookId } = useParams();
    const book = books.find((book) => book.id === bookId);
 
-   useEffect(() => {
-      if (!book) return;
+   if (!book) {
+         return <Navigate to="/not-found" replace />
+   }
 
+   useEffect(() => {
       if (profile.viewedBooks.some((viewedBook) => viewedBook.id === book.id)) {
          return;
       }

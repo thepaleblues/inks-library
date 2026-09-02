@@ -15,6 +15,7 @@ import BookDetails from './features/BookDetails.jsx';
 import Navbar from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
 import About from './components/About.jsx';
+import NotFound from './components/NotFound.jsx';
 
 import readProfile from './data/readProfile.js';
 import { 
@@ -158,7 +159,16 @@ function App() {
             path="/about" 
             element={<About />} 
           />
+           <Route
+            path="/not-found"
+            element={<NotFound />}
+          />
+          <Route
+            path="*"
+            element={<NotFound />}
+          />
         </Routes>
+        
       </div>
       <Footer />
     </BrowserRouter>
