@@ -121,7 +121,7 @@ function BookDetails ({
    useEffect(() => {
       if (!book) return;
 
-      if (profile.viewedBooks.includes(book)) {
+      if (profile.viewedBooks.some((viewedBook) => viewedBook.id === book.id)) {
          return;
       }
       
