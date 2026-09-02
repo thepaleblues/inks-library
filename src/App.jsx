@@ -63,6 +63,11 @@ function ChangePagesLogic({ setFilters }) {
     if (onHome) {
       sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
 
+      setFilters({
+        search: "",
+        mood: "",
+      });
+
       if (!restoreScroll(HOME_SCROLL_KEY)) {
         window.scrollTo(0, 0);
       }
