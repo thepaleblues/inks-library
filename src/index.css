@@ -35,3 +35,13 @@
       @apply text-base text-lg;
    }
 }
+
+html.home-scroll {
+   scroll-snap-type: y mandatory;
+}
+
+html.home-scroll .home-snap-section,
+html.home-scroll .site-footer {
+   scroll-snap-align: start;
+}
+

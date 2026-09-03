@@ -1,4 +1,5 @@
 import '../index.css';
+import { useEffect } from 'react';
 
 import Recommendations from '../ink/Recommendations.jsx';
 
@@ -10,7 +11,10 @@ function Hero({
    secondLine
 }) {
    return( 
-      <div className="
+      <div 
+         className="
+            home-hero
+            home-snap-section
             flex flex-col
             items-center
             w-full min-h-dvh
@@ -39,9 +43,16 @@ function Home({
    setCurrentBook,
    isNewUser
 }) {
+   useEffect(() => {
+      document.documentElement.classList.add('home-scroll');
+
+      return () => {
+         document.documentElement.classList.remove('home-scroll');
+      };
+   }, []);
 
    return (      
-      <div>
+      <div className="home-page">
          {
             isNewUser || topMoods.length.points === 0 ?  (
                <Hero 

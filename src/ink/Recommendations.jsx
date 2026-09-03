@@ -126,15 +126,20 @@ function Recommendations({ topMoods, setCurrentBook }) {
       ) : (
           <div 
             className="
-               pt-40 px-5
-               sm:px-8 lg:px-20 xl:px-60
+               px-5
+               sm:px-8
+               lg:px-20 xl:px-60
                bg-grey-gradient
             "
          >
             <div className="w-full">
-               
                {/* FIRST RECO */}
-               <div className="w-full min-h-dvh"> 
+               <div 
+                  className="
+                     home-snap-section
+                     flex min-h-dvh flex-col justify-center
+                  "
+               > 
                      <div className="">
                         <h1 className="pt-16 text-center">
                            {dialogues.reco.firstBook}
@@ -154,7 +159,12 @@ function Recommendations({ topMoods, setCurrentBook }) {
                </div>
 
                {/* SECOND RECO */}
-               <div className="w-full min-h-dvh pb-40 lg:pb-0">
+               <div 
+                  className="
+                     home-snap-section
+                     flex min-h-dvh flex-col justify-center
+                  "
+               >
                   <div 
                      className="
                         flex flex-col items-center justify-center
