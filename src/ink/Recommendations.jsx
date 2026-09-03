@@ -33,7 +33,6 @@ function getDailyBooksReco(key, moodBooks) {
    return recoBooks;  
 }
 
-
 function getDailyDialogue(key, recoDialogues) {
    if (!recoDialogues || recoDialogues.length === 0) {
       return "";
@@ -59,7 +58,6 @@ function getDailyDialogue(key, recoDialogues) {
 
    return randomizedDialogue;
 }
-
 
 function RecoBooks({ booksToReco, setCurrentBook}) {
    return (
@@ -92,30 +90,35 @@ function RecoBooks({ booksToReco, setCurrentBook}) {
    );
 }
 
-
 function Recommendations({ topMoods, setCurrentBook }) {
-   const [firstMood, secondMood] = topMoods;
+   const moodData = topMoods.slice(0, 2).map(mood => {
+      const alter = moodAndGenre.find(
+         group => group.mood === mood?.id
+      )?.alter;
 
-   const firstGroup = moodAndGenre.find(group => group.mood === firstMood?.id);
-   const secondGroup = moodAndGenre.find(group => group.mood === secondMood?.id);
+      const moodBooks = books.filter(book =>
+         book.mood.includes(mood.id)
+      );
 
-   const firstAlter = firstGroup?.alter;
-   const secondAlter = secondGroup?.alter;
+      return {
+         mood,
+         alter,
+         recoBooks: getDailyBooksReco(
+            `books-${mood?.id}`,
+            moodBooks
+         ),
+         dialogue: getDailyDialogue(
+            `dialogue-${mood?.id}`,
+            dialogues.moodDialogues[alter]
+         ),
+      };
+   });
 
-   const firstMoodBooks = books.filter(book => book.mood.includes(firstMood.id));
-   const secondMoodBooks = books.filter(book => book.mood.includes(secondMood.id));
+   const [first, second] = moodData;
 
-   const firstRecoBooks = getDailyBooksReco(
-      `first-books-${firstMood?.id}`, firstMoodBooks
-   );
-   const secondRecoBooks = getDailyBooksReco(
-      `second-books-${secondMood?.id}`, secondMoodBooks
-   );
-
-   const firstDialogue = getDailyDialogue(
-      `first-dialogue-${firstMood?.id}`,
-      dialogues.moodDialogues[firstAlter]
-   );
+   if (!second?.mood?.points) {
+      return null;
+   }
 
    return (
       topMoods[1].points === 0 ? (
@@ -135,17 +138,17 @@ function Recommendations({ topMoods, setCurrentBook }) {
                      <div className="">
                         <h1 className="pt-16 text-center">
                            {dialogues.reco.firstBook}
-                           {firstAlter?.toLowerCase()}.
+                           {first.alter?.toLowerCase()}.
                         </h1>
 
                         <p className="pt-5 text-center">
                            {dialogues.reco.firstBookComment}
-                           <b>{firstDialogue}</b>
+                           <b>{first.dialogue}</b>
                         </p>
                      </div>
 
                   <RecoBooks 
-                     booksToReco={firstRecoBooks} 
+                     booksToReco={first.recoBooks} 
                      setCurrentBook={setCurrentBook}
                   />
                </div>
@@ -165,12 +168,12 @@ function Recommendations({ topMoods, setCurrentBook }) {
                      />
                      <h1 className="pt-3 text-center sm:pt-5 sm:pl-5">
                         {dialogues.reco.suggestionLine}
-                        {secondAlter?.toLowerCase()} ?
+                        {second.alter?.toLowerCase()} ?
                      </h1>
                   </div>
                   
                   <RecoBooks 
-                     booksToReco={secondRecoBooks}
+                     booksToReco={second.recoBooks}
                      setCurrentBook={setCurrentBook}
                   />
                </div>
