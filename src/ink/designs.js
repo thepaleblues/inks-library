@@ -1,5 +1,5 @@
 export const imageModules = import.meta.glob(
-   "../assets/images/ink/*.{jpg,jpeg,png}",
+   "../assets/ink/*.{jpg,jpeg,png}",
    {
       eager: true,
       import: "default"
@@ -7,7 +7,7 @@ export const imageModules = import.meta.glob(
 );
 
 function getInkImage(id) {
-   return imageModules[`../assets/images/ink/${id}.png`]
+   return imageModules[`../assets/ink/${id}.png`]
 };
 
 const inksDesigns = {
