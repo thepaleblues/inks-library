@@ -3,7 +3,7 @@ import '../index.css';
 
 function Footer() {
    return (
-         <div className="
+         <footer className="
             site-footer
             p-20   
             bg-black text-white
@@ -12,7 +12,7 @@ function Footer() {
          {/* MAILTO */}
          <ul className="flex justify-center">
             <li className="
-               px-3 
+               px-3 pb-10
                text-2xl
                hover:underline
             ">
@@ -23,13 +23,16 @@ function Footer() {
          </ul>
 
          {/* CREDITS */}
-         <p className="py-10 text-center">
+         <p className="py-5 text-center">
             Book editions featured on Ink's Library are from Penguin Classics.
          </p>
          <p className="text-center">
             © 2026 Ink's Library · @thepaleblues
          </p>
-      </div>
+         <p className="text-center pt-24">
+            P.S. Ink WILL judge you.
+         </p>
+      </footer>
    );
 }
 
