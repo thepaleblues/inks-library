@@ -63,21 +63,21 @@ function About() {
                   sm:flex-row
                "
             >
-               <How 
-                  num="01"
-                  title="Pick a Mood"
-                  texts="Choose your mood. Ink will take it from there."
-               />
-               <How 
-                  num="02"
-                  title="Explore"
-                  texts="See what Ink has in mind for you."
-               />
-               <How 
-                  num="03"
-                  title="Find Your Read"
-                  texts="Ink recommends a classic you might enjoy."
-               />
+           <How 
+               num="01"
+               title="Explore"
+               texts="Browse the library. See what catches your eye."
+            />
+            <How 
+               num="02"
+               title="Ink Takes Note"
+               texts="The books you explore give Ink an idea of your taste."
+            />
+            <How 
+               num="03"
+               title="Find Your Read"
+               texts="Come back to see what Ink thinks you should read."
+            />
             </div>
          </div>
       </div>
