@@ -4,7 +4,6 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  useLocation
 } from 'react-router-dom';
 
 import './index.css';
@@ -16,83 +15,14 @@ import Navbar from './components/Navigation.jsx';
 import Footer from './components/Footer.jsx';
 import About from './components/About.jsx';
 import NotFound from './components/NotFound.jsx';
+import ChangePagesLogic from './components/ChangePagesLogic.jsx';
 
 import readProfile from './data/readProfile.js';
 import { 
   checkFirstVisit,  
-  loadProfile, 
-  LIBRARY_SCROLL_KEY, 
-  HOME_SCROLL_KEY
+  loadProfile
 } from './storage/localStorage.js';
 
-
-function ChangePagesLogic({ setFilters }) {
-  const location = useLocation();
-
-  useEffect(() => {
-    const path = location.pathname;
-    const onLibrary = path === "/library";
-    const onHome = path === "/";
-    const onBookDetails = path.startsWith("/book-details");
-
-    const restoreScroll = (scrollKey) => {
-      const returningFromDetails =
-        sessionStorage.getItem("page-return") === "book-details";
-      const savedScroll = sessionStorage.getItem(scrollKey);
-
-      if (!returningFromDetails || savedScroll === null) return false;
-
-      requestAnimationFrame(() => {
-        window.scrollTo(0, Number(savedScroll));
-      });
-
-      sessionStorage.removeItem("page-return");
-      sessionStorage.removeItem(scrollKey);
-      return true;
-    };
-
-    if (onLibrary) {
-      sessionStorage.removeItem(HOME_SCROLL_KEY);
-
-      if (!restoreScroll(LIBRARY_SCROLL_KEY)) {
-        window.scrollTo(0, 0);
-      }
-      return;
-    }
-
-    if (onHome) {
-      sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
-
-      setFilters({
-        search: "",
-        mood: "",
-      });
-
-      if (!restoreScroll(HOME_SCROLL_KEY)) {
-        window.scrollTo(0, 0);
-      }
-      return;
-    }
-
-    if (onBookDetails) {
-      window.scrollTo(0, 0);
-      return;
-    }
-
-    sessionStorage.removeItem("page-return");
-    sessionStorage.removeItem(LIBRARY_SCROLL_KEY);
-    sessionStorage.removeItem(HOME_SCROLL_KEY);
-
-    window.scrollTo(0, 0);
-
-    setFilters({
-      search: "",
-      mood: "",
-    });
-  }, [location.pathname, setFilters]);
-
-  return null;
-}
 
 function App() {
   const [isNewUser, setIsNewUser] = useState(() => checkFirstVisit());
@@ -115,6 +45,10 @@ function App() {
         mood: ``
     }
   });
+
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
   
   useEffect(() => {
     localStorage.setItem("hasVisited", "true");
