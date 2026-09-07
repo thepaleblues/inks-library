@@ -5,7 +5,7 @@ function NoResults() {
    return (
       <div className="
             flex justify-center
-            py-30   
+            py-30  
          "
       >
          {/* IMAGE */}
@@ -18,7 +18,13 @@ function NoResults() {
             <h1 className="pt-19 pl-5">
                   No books found
             </h1>
-            <p className="pl-5">This is awkward...</p>
+            <p 
+               className="
+                  pl-5 text-xl
+               "
+            >
+               This is awkward...
+            </p>
          </div>
       </div>
    );
