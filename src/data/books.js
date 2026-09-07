@@ -10,9 +10,8 @@ const books  = [
       ],
       description:  "After the destruction of Troy, Aeneas escapes with a group of survivors and journeys across the Mediterranean, facing wars, prophecies, and divine forces on his path to establish a new homeland.",
       mood: [
-         "Needed a Caption",
-         "Wrong Era",
-         "Performative"
+         "Wrong Era", 
+         "Needed a Caption"
       ]
    }),
    createBook({
@@ -23,8 +22,8 @@ const books  = [
       ],
       description: "Conversations and teachings attributed to Confucius present lessons on personal conduct, family relationships, education, government, and the cultivation of virtue.",
       mood: [
-         "Existential Crisis", 
-         "I Have No Idea"
+         "Soul Maintenance", 
+         "Existential Crisis"
       ]
    }),
    createBook({
@@ -32,8 +31,8 @@ const books  = [
       title: "The Arabian Nights: Tales from a Thousand and One Nights",
       description: "Scheherazade tells a series of interconnected stories to delay her execution, weaving together tales of kings, merchants, adventurers, lovers, and magical beings.",
       mood: [
-         "Escapism",
-         "I Have No Idea"
+         "Wanderlust", 
+         "Escapism"
       ]
    }),
    createBook({
@@ -44,9 +43,8 @@ const books  = [
       ],
       description: "A collection of strategic teachings explaining how commanders should plan battles, understand opponents, and achieve victory through preparation and intelligence.",
       mood: [
-         "Existential Crisis",
-         "Wrong Era",
-         "I Have No Idea"
+         "Existential Crisis", 
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -54,7 +52,7 @@ const books  = [
       title: "The Bhagavad Gita",
       description: "Prince Arjuna struggles with whether he should fight in an approaching war, receiving guidance from Krishna about duty, morality, and spiritual purpose.",
       mood: [
-         "Soul Maintenance",
+         "Soul Maintenance", 
          "Existential Crisis"
       ]
    }),
@@ -63,9 +61,8 @@ const books  = [
       title: "Beowulf",
       description: "The warrior Beowulf travels to Denmark to defeat the monster Grendel, later facing further battles that test his strength, leadership, and legacy.",
       mood: [
-         "Wanderlust",
-         "Needed a Caption",
-         "Performative"
+         "Needed a Caption", 
+         "Wanderlust"
       ]
    }),
    createBook({
@@ -75,7 +72,10 @@ const books  = [
          "Friedrich Nietzsche",
       ],
       description:"A series of philosophical reflections challenging traditional beliefs about morality, truth, religion, and the ideas people use to define good and evil.",
-      mood: ["Existential Crisis"]
+      mood: [
+         "Existential Crisis",
+         "I Have No Idea"
+      ]
    }),
    createBook({
       id: "the-brothers-karamazov",
@@ -85,8 +85,9 @@ const books  = [
       ],
       description: "Three brothers with very different beliefs become entangled in family conflict when their father is murdered, forcing them to confront guilt, faith, and responsibility.",
       mood: [
-         "Existential Crisis",
-         "Performative"
+         "Too Happy", 
+         "Existential Crisis", 
+         "Trust Issues"
       ]
    }),
    createBook({
@@ -97,7 +98,7 @@ const books  = [
       ],
       description:"Candide is expelled from his sheltered life and travels through wars, disasters, and societies around the world while questioning the optimistic philosophy he was taught.",
       mood: [
-         "Sad",
+         "Sad", 
          "Existential Crisis"
       ]
    }),
@@ -110,8 +111,7 @@ const books  = [
       description: "A group of pilgrims traveling to Canterbury entertain one another by telling stories about love, deception, morality, religion, and everyday life.",
       mood: [
          "Sad",
-         "Needed a Caption",
-         "Performative"
+         "Needed a Caption"
       ]
    }),
    createBook({
@@ -122,8 +122,8 @@ const books  = [
       ],
       description: "A land surveyor arrives in a village hoping to work for the mysterious Castle authorities but becomes trapped in endless attempts to gain access and recognition.",
       mood: [
-         "Existential Crisis",
-         "Performative"
+         "Existential Crisis", 
+         "Trust Issues"
       ]
    }),
    createBook({
@@ -134,14 +134,11 @@ const books  = [
          "Friedrich Engels",
       ],
       description: "Marx and Engels present an argument about class struggle, describing the conflict between workers and ruling classes and calling for revolutionary change.",
-      mood: [
-         "Wrong Era",
-         "Existential Crisis"
-      ]
+      mood: ["Wrong Era", "Existential Crisis"]
    }),
    createBook({
       id: "confessions",
-      title: "Confessions",
+      title: "Confessions" ,
       author: [
          "Augustine of Hippo",
       ],
@@ -159,11 +156,9 @@ const books  = [
       ],
       description: "Edmond Dantès is falsely imprisoned by those who betray him, escapes years later with a new identity, and plans a carefully executed revenge.",
       mood: [
-         "Wanderlust",
-         "Trust Issues",
-         "Performative"
+         "Wanderlust", 
+         "Trust Issues"
       ]
-
    }),
    createBook({
       id: "crime-and-punishment",
@@ -174,11 +169,10 @@ const books  = [
       description: "Raskolnikov, a struggling former student in St. Petersburg, commits murder and becomes consumed by guilt, fear, and the search for redemption.",
       mood: [
          "Trust Issues",
-         "Existential Crisis",
-         "Performative"
+         "Existential Crisis"
       ]
    }),
-   createBook({
+   createBook({ // ?
       id: "the-death-of-ivan-ilyich",
       title: "The Death of Ivan Ilyich",
       author: [
@@ -186,21 +180,21 @@ const books  = [
       ],
       description: "Ivan Ilyich, a successful government official, faces a painful illness that forces him to reconsider his career, relationships, and the meaning of his life.",
       mood: [
-         "Existential Crisis",
-         "Performative"
+         "Too Happy", 
+         "Existential Crisis"
       ]
    }),
    createBook({
       id: "the-divine-comedy",
       title: "The Divine Comedy",
       author: [
-         "Dante Alighieri",
+         "Dante Alighieri"
       ],
       description: "Dante journeys through Hell, Purgatory, and Paradise with the guidance of Virgil and Beatrice, encountering souls who reveal the consequences of human choices.",
       mood: [
-         "Needed a Caption",
+         "Needed a Caption", 
          "Soul Maintenance",
-         "Performative"
+         "Existential Crisis"
       ]
    }),
    createBook({
@@ -211,9 +205,8 @@ const books  = [
       ],
       description: "Don Quixote becomes convinced that he is a knight from a world of chivalry and sets out with Sancho Panza on a series of humorous and often misguided adventures.",
       mood: [
-         "Sad",
-         "Wanderlust",
-         "Performative"
+         "Escapism", 
+         "Wanderlust"
       ]
    }),
    createBook({
@@ -225,7 +218,7 @@ const books  = [
       description: "Count Dracula travels from Transylvania to England, where a group of people uncover his supernatural nature and attempt to stop his terrifying plans.",
       mood: [
          "Life TOO Peaceful",
-         "Trust Issues",
+         "Hopelessly Romantic",
       ]
    }),
    createBook({
@@ -247,7 +240,7 @@ const books  = [
       mood: [
          "Wanderlust",
          "Needed a Caption",
-	      "Performative"
+         "Existential Crisis"
       ]
    }),
    createBook({
@@ -273,8 +266,7 @@ const books  = [
       description: "Victor Frankenstein creates a living creature through scientific experimentation but abandons it, leading to a tragic conflict between creator and creation.",
       mood: [
          "Life TOO Peaceful",
-         "Escapism",
-	      "Performative"
+         "Existential Crisis"
       ]
    }),
    createBook({
@@ -285,8 +277,8 @@ const books  = [
 	   ],
       description: "Moll Flanders recounts her adventurous life of poverty, crime, marriage, and survival while navigating the social realities of eighteenth-century England.",
       mood: [
-         "Performative",
-         "Wanderlust"
+         "Wanderlust",
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -297,8 +289,8 @@ const books  = [
 	   ],
       description: "Alexei, a young tutor employed by a wealthy Russian family, becomes consumed by gambling while navigating obsession, love, and financial desperation.",
       mood: [
-         "Performative",
-         "Trust Issues"
+         "Too Happy",
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -309,9 +301,8 @@ const books  = [
 	   ],
       description: "A collection of short stories portraying ordinary moments, social divisions, personal discoveries, and emotional changes in early twentieth-century life.",
       mood: [
-         "Performative",
-         "Sad",
-         "Wrong Era"
+         "Too Happy",
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -335,8 +326,7 @@ const books  = [
       description: "Lucius is transformed into a donkey after experimenting with magic and experiences a series of comic, dangerous, and unusual adventures before seeking restoration.",
       mood: [
          "Sad",
-         "Escapism",
-	      "Performative"
+         "Escapism"
       ]
    }),
    createBook({
@@ -348,7 +338,7 @@ const books  = [
       description: "A narrator recounts the complicated relationships between two couples, gradually revealing betrayal, deception, and hidden emotional conflicts.",
       mood: [
          "Hopelessly Romantic",
-         "Performative",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -360,7 +350,7 @@ const books  = [
       description: "The Joad family leaves their drought-stricken Oklahoma farm and travels west toward California, facing poverty, exploitation, and hardship during the Great Depression.",
       mood: [
          "Wrong Era",
-         "Performative",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -372,8 +362,7 @@ const books  = [
       description: "Lemuel Gulliver travels to strange lands inhabited by unusual societies, using his adventures to satirize politics, science, and human behavior.",
       mood: [
          "Sad",
-         "Wanderlust",
-	      "Escapism"
+         "Wanderlust"
       ]
    }),
    createBook({
@@ -385,7 +374,7 @@ const books  = [
       description: "In medieval Paris, the lives of Quasimodo, Esmeralda, and Archdeacon Frollo become connected through love, obsession, and tragedy.",
       mood: [
          "Hopelessly Romantic",
-         "Performative",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -396,8 +385,8 @@ const books  = [
 	   ],
       description: "Prince Myshkin returns to Russian society with compassion and innocence but struggles against greed, jealousy, and social corruption.",
       mood: [
-         "Existential Crisis",
-         "Performative"
+         "Hopelessly Romantic",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -409,20 +398,19 @@ const books  = [
       description: "During the Trojan War, the conflict between Achilles and Agamemnon leads to devastating battles that explore honor, rage, heroism, and mortality.",
       mood: [
          "Needed a Caption",
-         "Wrong Era",
-	      "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
       id: "jane-eyre",
       title: "Jane Eyre",
       author: [
-	      "Charlotte Brontë"
+	      "Charlotte Bronte"
 	   ],
       description: "Jane Eyre grows from an isolated childhood into an independent woman while facing hardship, love, and the secrets surrounding Thornfield Hall.",
       mood: [
          "Hopelessly Romantic",
-         "Performative",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -431,20 +419,19 @@ const books  = [
       description: "The monk Xuanzang travels to India to obtain sacred Buddhist scriptures, accompanied by companions including the rebellious Monkey King Sun Wukong.",
       mood: [
          "Escapism",
-         "Wanderlust",
-	      "Soul Maintenance"
+         "Wanderlust"
       ]
    }),
    createBook({
       id: "the-jungle-books",
       title: "The Jungle Books",
       author: [
-	      "Upton Sinclair"
+	      "Rudyard Kipling"
 	   ],
-      description: "Jurgis Rudkus and his family immigrate to Chicago seeking a better life but encounter poverty and exploitation in the industrial meatpacking industry.",
+      description: "Mowgli, a boy raised by wolves in the Indian jungle, encounters animals such as Baloo, Bagheera, and Shere Khan while learning the laws and dangers of the jungle.",
       mood: [
          "Wrong Era",
-         "Performative",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -456,7 +443,7 @@ const books  = [
       description: "Emma Bovary searches for excitement beyond her provincial life through romance, luxury, and fantasy, but her desires lead to debt, disappointment, and tragedy.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ],
    }),
    createBook({
@@ -479,9 +466,8 @@ const books  = [
 	   ],
       description: "Gregor Samsa wakes one morning transformed into a strange insect-like creature, forcing him and his family to confront isolation, responsibility, and identity.",
       mood: [
-         "Life TOO Peaceful",
-         "Existential Crisis",
-	      "Performative"
+         "Escapism",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -493,7 +479,7 @@ const books  = [
       description: "Set in a provincial English town, the novel intertwines the lives of several characters as they navigate marriage, ambition, politics, and personal growth.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -505,19 +491,19 @@ const books  = [
       description: "Maggie Tulliver grows up in rural England struggling between personal desires, family expectations, and the limitations placed on women of her time.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
       id: "moby-dick",
-      title: "Moby Dick",
+      title: "Moby-Dick",
       author: [
 	      "Herman Melville"
 	   ],
       description: "Ishmael joins Captain Ahab’s whaling voyage, where the pursuit of the great white whale becomes an exploration of obsession, fate, and humanity’s struggle against nature.",
       mood: [
          "Wanderlust",
-         "Performative",
+         "Existential Crisis"
       ]
    }),
    createBook({
@@ -528,8 +514,8 @@ const books  = [
 	   ],
       description: "Odysseus attempts to return home after the Trojan War, facing mythical creatures, divine interference, and years of hardship before reaching Ithaca.",
       mood: [
-         "Wanderlust",
-         "Performative"
+         "Needed a Caption",
+         "Wanderlust"
       ]
    }),
    createBook({
@@ -552,15 +538,15 @@ const books  = [
 	   ],
       description: "Dorian Gray remains physically youthful while a hidden portrait reflects the corruption caused by his pursuit of pleasure and selfish desires.",
       mood: [
-         "Life TOO Peaceful",
-         "Performative"
+         "Trust Issues",
+         "Existential Crisis"
       ]
    }),
    createBook({
       id: "the-prince",
       title: "The Prince",
       author: [
-	      "Niccolò Machiavelli"
+	      "Niccolo Machiavelli"
 	   ],
       description: "Machiavelli presents advice to rulers on gaining and maintaining political power through strategy, reputation, and practical decision-making.",
       mood: [
@@ -572,7 +558,7 @@ const books  = [
       id: "pride-and-prejudice",
       title: "Pride and Prejudice",
       author: [
-	      "Jane Austin"
+         "Jane Austen"
 	   ],
       description: "Elizabeth Bennet navigates family pressures, social expectations, and her changing relationship with the wealthy and reserved Mr. Darcy.",
       mood: [
@@ -588,7 +574,8 @@ const books  = [
 	   ],
       description: "Through conversations led by Socrates, the dialogue examines justice, politics, education, and the nature of an ideal society.",
       mood: [
-         "Existential Crisis"
+         "Existential Crisis",
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -646,8 +633,9 @@ const books  = [
 	      "Virginia Woolf"
 	   ],
       description: "The Ramsay family’s visits to a Scottish island reveal changing relationships, personal memories, and the passage of time across generations.",
-      mood: [
-         "Performative"
+      mood: [  
+         "Too Happy",
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -659,7 +647,7 @@ const books  = [
       description: "Tristram attempts to tell the story of his life but becomes distracted by countless digressions, creating a playful and unconventional comic narrative.",
       mood: [
          "Sad",
-         "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -695,19 +683,19 @@ const books  = [
       description: "Several aristocratic families experience love, ambition, and personal transformation during the Napoleonic invasion of Russia.",
       mood: [
          "Wrong Era",
-         "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
       id: "wuthering-heights",
       title: "Wuthering Heights",
       author: [
-	      "Emily Brontë"
+	      "Emily Bronte"
 	   ],
       description: "The turbulent relationship between Heathcliff and Catherine shapes generations of families through passion, revenge, and emotional destruction.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -718,9 +706,8 @@ const books  = [
 	   ],
       description: "Three connected Greek tragedies follow Agamemnon's family through murder, revenge, and the transformation of justice from personal vengeance to civic law.",
       mood: [
-         "Performative",
-         "Existential Crisis",
-         "Trust Issues"
+         "Too Happy",
+         "Needed a Caption"
       ]
    }),
    createBook({
@@ -731,9 +718,8 @@ const books  = [
 	   ],
       description: "Betrayed by her husband, Medea seeks a terrible revenge while other tragedies examine war, suffering, and the power of the gods.",
       mood: [
-         "Performative",
-         "Sad",
-         "Trust Issues"
+         "Too Happy",
+         "Needed a Caption"
       ]
    }),
    createBook({
@@ -745,7 +731,7 @@ const books  = [
       description: "A sweeping account of the Greco-Persian Wars combines historical events with stories about cultures, rulers, and legendary figures.",
       mood: [
          "Wrong Era",
-         "Performative"
+         "Wanderlust"
       ]
    }),
    createBook({
@@ -754,9 +740,10 @@ const books  = [
       author: [
 	      "Seneca"
 	   ],
-      description: "Philosophical writings explore anger, happiness, fate, mercy, and the pursuit of wisdom.",
+      description: "A series of personal letters in which Seneca gives practical advice on handling life’s challenges with wisdom and composure.",
       mood: [
-         "Existential Crisis"
+         "Existential Crisis",
+         "I Have No Idea"
       ]
    }),
    createBook({
@@ -765,9 +752,10 @@ const books  = [
       author: [
 	      "Seneca"
 	   ],
-      description: "Philosophical writings explore anger, happiness, fate, mercy, and the pursuit of wisdom.",
+      description: "A collection of philosophical essays and conversations in which Seneca examines morality, human behavior, and the nature of a good life.",
       mood: [
-         "Existential Crisis"
+         "Existential Crisis",
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -801,10 +789,8 @@ const books  = [
 	   ],
       description: "Prince Hamlet seeks revenge after discovering that his father was murdered, leading to tragedy, betrayal, and philosophical reflection.",
       mood: [
-         "Performative",
-         "Existential Crisis",
          "Trust Issues",
-         "Sad"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -815,10 +801,9 @@ const books  = [
 	   ],
       description: "A Scottish nobleman's ambition and belief in prophecy lead him toward tyranny, guilt, and destruction.",
       mood: [
-         "Performative",
-         "Trust Issues",
-         "Existential Crisis",
-         "Sad"
+         "Too Happy",
+         "Life TOO Peaceful",
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -829,10 +814,7 @@ const books  = [
 	   ],
       description: "An aging king divides his kingdom among his daughters, unleashing betrayal, madness, and family tragedy.",
       mood: [
-         "Performative",
-         "Trust Issues",
-         "Existential Crisis",
-         "Sad"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -844,7 +826,7 @@ const books  = [
       description: "Two young lovers from feuding families pursue a forbidden romance with tragic consequences.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -856,7 +838,7 @@ const books  = [
       description: "A magician uses his powers to confront betrayal while exploring forgiveness, justice, and reconciliation.",
       mood: [
          "Escapism",
-         "Performative"
+         "Too Happy"
       ],
    }),
    createBook({
@@ -868,8 +850,7 @@ const books  = [
       description: "Lovers, fairies, and mistaken identities create a magical comedy about love and imagination.",
       mood: [
          "Sad",
-         "Escapism",
-	      "Performative"
+         "Escapism"
       ]
    }),
    createBook({
@@ -881,8 +862,7 @@ const books  = [
       description: "Two couples navigate deception, misunderstandings, and romance in one of Shakespeare's most celebrated comedies.",
       mood: [
          "Sad",
-         "Hopelessly Romantic",
-	      "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -894,7 +874,7 @@ const books  = [
       description: "Ten young people escaping the plague tell one hundred stories about love, fortune, deception, and human nature.",
       mood: [
          "Sad",
-         "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -905,7 +885,6 @@ const books  = [
 	   ],
       description: "Satirical essays expose social inequality, political corruption, and human foolishness through wit and irony.",
       mood: [
-         "Performative",
          "Wrong Era",
          "Sad"
       ]
@@ -930,7 +909,8 @@ const books  = [
 	   ],
       description: "Rousseau explores political freedom and argues that legitimate governments derive authority from the consent of the governed.",
       mood: [
-         "Existential Crisis"
+         "Existential Crisis",
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -941,7 +921,8 @@ const books  = [
 	   ],
       description: "Rousseau examines the origins of inequality and the effects of civilization on human society.",
       mood: [
-         "Existential Crisis"
+         "Existential Crisis",
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -952,7 +933,8 @@ const books  = [
 	   ],
       description: "Aristotle analyzes different forms of government and the role of citizens in an ideal society.",
       mood: [
-         "Existential Crisis"
+         "Existential Crisis",
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -964,7 +946,7 @@ const books  = [
       description: "Practical lessons teach resilience, self-discipline, and focusing only on what lies within one's control.",
       mood: [
          "Existential Crisis",
-         "I Have No Idea"
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -988,7 +970,7 @@ const books  = [
       description: "A young woman navigates class divisions, industrial conflict, and romance in Victorian England.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -999,7 +981,7 @@ const books  = [
 	   ],
       description: "A quiet English village is portrayed through humorous and affectionate stories of its people.",
       mood: [
-         "Performative",
+         "Hopelessly Romantic",
          "Sad"
       ]
    }),
@@ -1007,42 +989,36 @@ const books  = [
       id: "noli-me-tangere",
       title: "Noli Me Tangere",
       author: [
-	      "José Rizal"
+	      "Jose Rizal"
 	   ],
       description: "Crisóstomo Ibarra returns to the Philippines hoping to reform society but encounters corruption, injustice, and the abuses of Spanish colonial rule.",
       mood: [
-         "Performative",
          "Wrong Era",
-         "Trust Issues",
-         "Existential Crisis"
+         "Hopelessly Romantic",
       ]
    }),
    createBook({
       id: "el-filibusterismo",
       title: "El Filibusterismo",
       author: [
-	      "José Rizal"
+	      "Jose Rizal"
 	   ],
       description: "Years after the events of Noli Me Tangere, Simoun secretly pursues revenge while exposing the failures of colonial society.",
       mood: [
-         "Performative",
          "Wrong Era",
          "Trust Issues",
-         "Existential Crisis"
       ]
    }),
    createBook({
       id: "the-woman-who-had-two-navels",
       title: "The Woman Who Had Two Navels and Tales of the Tropical Gothic",
       author: [
-	      "Nick Joaquín"
+	      "Nick Joaquin"
 	   ],
       description: "Stories blending history, memory, identity, and myth explore the complexities of Filipino culture.",
       mood: [
-         "Performative",
-         "Wrong Era",
-         "Existential Crisis",
-         "Escapism"
+         "Too Happy",
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -1054,7 +1030,7 @@ const books  = [
       description: "A Filipino immigrant recounts his experiences with poverty, racism, labor activism, and hope in the United States.",
       mood: [
          "Wrong Era",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -1066,32 +1042,31 @@ const books  = [
       description: "Anna Karenina enters a passionate relationship that challenges the expectations of Russian society while the lives of several families explore love, marriage, faith, and personal fulfillment.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
       id: "bleak-house",
-      title: "Bleak Hosue",
+      title: "Bleak House",
       author: [
 	      "Charles Dickens"
 	   ],
       description: "Multiple lives become connected through a lengthy legal dispute while hidden family secrets, social inequality, and corruption gradually come to light.",
       mood: [
-         "Performative",
-         "Trust Issues"
+         "Trust Issues",
+         "Too Happy"
       ]
    }),
    createBook({
       id: "cousin-bette",
       title: "Cousin Bette",
       author: [
-	      "Honoré de Balzac"
+	      "Honore de Balzac"
 	   ],
       description: "Resentful of her wealthy relatives, Cousin Bette quietly sets in motion a series of schemes that threaten the lives and fortunes of an entire family.",
       mood: [
-         "Performative",
-         "Trust Issues",
-         "Hopelessly Romantic"
+         "Hopelessly Romantic",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -1103,7 +1078,7 @@ const books  = [
       description: "Two aristocrats manipulate friends and lovers through deception and seduction, turning their private games into destructive consequences.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Trust Issues"
       ]
    }),
    createBook({
@@ -1114,9 +1089,7 @@ const books  = [
 	   ],
       description: "David Copperfield recounts his journey from a difficult childhood to adulthood while discovering friendship, ambition, and his place in the world.",
       mood: [
-         "Performative",
-         "Sad",
-         "I Have No Idea",
+         "Hopelessly Romantic",
          "Wanderlust"
       ]
    }),
@@ -1128,10 +1101,8 @@ const books  = [
 	   ],
       description: "Chichikov travels across Russia purchasing the legal ownership of deceased serfs as part of an unusual scheme that exposes greed and social corruption.",
       mood: [
-         "Performative",
-         "Trust Issues",
-         "Wrong Era",
-         "Existential Crisis"
+         "Sad",
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -1142,8 +1113,8 @@ const books  = [
 	   ],
       description: "A provincial Russian town is shaken by political radicals whose beliefs and ambitions lead to violence, chaos, and moral conflict.",
       mood: [
-         "Existential Crisis",
-         "Performative"
+         "Trust Issues",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -1155,8 +1126,7 @@ const books  = [
       description: "A disillusioned nobleman and a thoughtful young woman experience missed opportunities, love, and regret across the changing seasons of their lives.",
       mood: [
          "Needed a Caption",
-         "Hopelessly Romantic",
-	      "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -1167,8 +1137,8 @@ const books  = [
 	   ],
       description: "A young nihilist returns home with his friend, bringing generational conflict and debates about politics, tradition, and love.",
       mood: [
-         "Existential Crisis",
-         "Performative"
+         "Too Happy",
+         "Existential Crisis"
       ]
    }),
    createBook({
@@ -1179,10 +1149,8 @@ const books  = [
 	   ],
       description: "Pip, an orphan raised in humble circumstances, unexpectedly gains the opportunity to become a gentleman while discovering the true meaning of wealth, loyalty, and love.",
       mood: [
-         "Performative",
-         "Sad",
-         "I Have No Idea",
-         "Hopelessly Romantic"
+         "Hopelessly Romantic",
+         "Wanderlust"
       ]
    }),
    createBook({
@@ -1193,10 +1161,8 @@ const books  = [
 	   ],
       description: "The lives of factory workers, teachers, and families reveal the consequences of an education and society built entirely on reason and industry.",
       mood: [
-         "Performative",
-         "Sad",
-         "Existential Crisis",
-         "Wrong Era"
+         "Wrong Era",
+         "Too Happy"
       ]
    }),
    createBook({
@@ -1208,8 +1174,7 @@ const books  = [
       description: "Charles Marlow travels deep into central Africa in search of a mysterious ivory trader, confronting imperialism, morality, and the darkness within humanity.",
       mood: [
          "Wanderlust",
-         "Existential Crisis",
-	      "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -1221,7 +1186,7 @@ const books  = [
       description: "Huck Finn escapes down the Mississippi River with an escaped slave, encountering adventure while questioning freedom, friendship, and society's values.",
       mood: [
          "Wanderlust",
-         "Performative"
+         "Sad"
       ]
    }),
    createBook({
@@ -1232,7 +1197,8 @@ const books  = [
 	   ],
       description: "A professor and his companions follow an ancient clue leading them beneath the Earth's surface, discovering extraordinary worlds along the way.",
       mood: [
-         "Wanderlust"
+         "Wanderlust",
+         "Escapism"
       ]
    }),
    createBook({
@@ -1243,23 +1209,19 @@ const books  = [
 	   ],
       description: "Former prisoner Jean Valjean seeks redemption while being relentlessly pursued by a determined police inspector during a time of social unrest in France.",
       mood: [
-         "Performative",
-         "Sad",
-         "Soul Maintenance",
-         "Wrong Era"
+         "Wrong Era",
+         "Too Happy"
       ]
    }),
    createBook({
       id: "lost-illusions",
       title: "Lost Illusions",
       author: [
-	      "Honoré de Balzac"
+	      "Honore de Balzac"
 	   ],
       description: "An ambitious young poet leaves his provincial home for Paris, where success, journalism, and society test his ideals and integrity.",
       mood: [
-         "Performative",
          "Hopelessly Romantic",
-         "Trust Issues",
          "Wrong Era"
       ]
    }),
@@ -1267,12 +1229,12 @@ const books  = [
       id: "notes-from-the-underground",
       title: "Notes from the Underground",
       author: [
-	      "Fyodor Dosteovsky"
+         "Fyodor Dostoevsky"
 	   ],
       description: "An isolated former civil servant reflects on his life, challenging ideas about reason, free will, and human nature through a series of personal confessions.",
       mood: [
          "Existential Crisis",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -1284,7 +1246,7 @@ const books  = [
       description: "An orphan boy escapes the hardships of the workhouse only to become entangled with criminals while searching for belonging and a better life.",
       mood: [
          "Wanderlust",
-         "Performative"
+         "Trust Issues"
       ]
    }),
    createBook({
@@ -1296,7 +1258,7 @@ const books  = [
       description: "Tom Sawyer fills his childhood with mischievous adventures, friendships, and unexpected dangers along the Mississippi River.",
       mood: [
          "Wanderlust",
-         "Performative"
+         "Sad"
       ]
    }),
    createBook({
@@ -1308,7 +1270,7 @@ const books  = [
       description: "A respected New York lawyer finds his engagement challenged when an unconventional woman forces him to question duty, love, and social expectations.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
@@ -1320,19 +1282,19 @@ const books  = [
       description: "Lily Bart struggles to maintain her place within New York's wealthy society while balancing love, ambition, and financial insecurity.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Too Happy"
       ]
    }),
    createBook({
       id: "the-island-of-dr-moreau",
       title: "The Island of Dr Moreau",
       author: [
-	      "H.G. Wells"
+	      "H. G. Wells"
 	   ],
       description: "A shipwrecked traveler arrives on a remote island where unsettling scientific experiments raise disturbing questions about humanity and ethics.",
       mood: [
          "Life TOO Peaceful",
-         "Performative"
+         "Escapism"
       ]
    }),
    createBook({
@@ -1344,7 +1306,7 @@ const books  = [
       description: "The disappearance of a priceless diamond draws family members, detectives, and servants into one of literature's earliest detective mysteries.",
       mood: [
          "Trust Issues",
-         "Performative"
+         "Wanderlust"
       ]
    }),
    createBook({
@@ -1356,8 +1318,7 @@ const books  = [
       description: "A mysterious masked figure haunting the Paris Opera House becomes obsessed with a talented young singer, leading to love, jealousy, and suspense.",
       mood: [
          "Life TOO Peaceful",
-         "Hopelessly Romantic",
-	      "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
@@ -1369,7 +1330,7 @@ const books  = [
       description: "Julien Sorel attempts to rise above his humble origins through ambition, romance, and calculated social advancement in post-Napoleonic France.",
       mood: [
          "Hopelessly Romantic",
-         "Performative"
+         "Wrong Era"
       ]
    }),
    createBook({
@@ -1381,21 +1342,19 @@ const books  = [
       description: "A young swordsman joins three legendary musketeers in adventures involving loyalty, political intrigue, and daring exploits across France.",
       mood: [
          "Wanderlust",
-         "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
       id: "the-time-machine",
       title: "The Time Machine",
       author: [
-	      "H.G. Wells"
+	      "H. G. Wells"
 	   ],
       description: "An inventor travels far into Earth's future, encountering distant civilizations that reshape his understanding of humanity's destiny.",
       mood: [
-         "Performative",
          "Wanderlust",
-         "Escapism",
-         "Existential Crisis"
+         "Escapism"
       ]
    }),
    createBook({
@@ -1407,14 +1366,14 @@ const books  = [
       description: "A chance encounter with a mysterious woman draws a young art teacher into a web of secrets, mistaken identities, and conspiracy.",
       mood: [
          "Trust Issues",
-         "Performative"
+         "Hopelessly Romantic"
       ]
    }),
    createBook({
       id: "the-imitation-of-christ",
       title: "The Imitation of Christ",
       author: [
-	      "Thomas à Kempis"
+	      "Thomas a Kempis"
 	   ],
       description: "A collection of reflections encourages readers to pursue humility, prayer, self-denial, and a closer relationship with Christ through everyday life.",
       mood: [
@@ -1430,7 +1389,8 @@ const books  = [
 	   ],
       description: "John of the Cross reflects on the spiritual struggles believers experience as they grow closer to God.",
       mood: [
-         "Soul Maintenance"
+         "Soul Maintenance",
+         "Needed a Caption"
       ]
    }),
    createBook({
@@ -1438,7 +1398,8 @@ const books  = [
       title: "Sayings of the Early Christian Monks",
       description: "A collection of stories and sayings from the Desert Fathers offers wisdom on prayer, humility, repentance, and spiritual discipline.",
       mood: [
-         "Soul Maintenance"
+         "Soul Maintenance",
+         "I Have No Idea"
       ]
    }),
    createBook({
@@ -1449,7 +1410,8 @@ const books  = [
 	   ],
       description: "Benedict sets out guidelines for monastic life centered on prayer, work, obedience, humility, and community.",
       mood: [
-         "Soul Maintenance"
+         "Soul Maintenance",
+         "I Have No Idea"
       ]
    }),
    createBook({
@@ -1457,7 +1419,8 @@ const books  = [
       title: "The Philokalia (A Selection)",
       description: "A collection of writings by Eastern Christian spiritual teachers offers guidance on prayer, virtue, and the pursuit of holiness.",
       mood: [
-         "Soul Maintenance"
+         "Soul Maintenance",
+         "Existential Crisis"
       ]
    }),
    createBook({
@@ -1465,7 +1428,8 @@ const books  = [
       title: "The Cloud of Unknowing and Other Works",
       description: "An anonymous writer presents teachings on contemplative prayer and seeking God through love rather than intellectual understanding.",
       mood: [
-         "Soul Maintenance"
+         "Soul Maintenance",
+         "I Have No Idea"
       ]
    }),
    createBook({
@@ -1476,15 +1440,13 @@ const books  = [
 	   ],
       description: "Julian of Norwich recounts a series of visions reflecting on God's love, mercy, and hope in the midst of suffering.",
       mood: [
-         "Soul Maintenance"
+         "Soul Maintenance",
+         "Wrong Era"
       ]
    }),
    createBook({
       id: "early-christian-writings",
       title: "Early Christian Writings",
-      author: [
-	      "Various"
-	   ],
       description: "Letters, sermons, and other early Christian writings offer instruction on faith, worship, Church leadership, and Christian living.",
       mood: [
          "Soul Maintenance",
@@ -1502,8 +1464,237 @@ const books  = [
          "Soul Maintenance",
          "Existential Crisis"
       ]
+   }),
+   createBook({
+      id: "alices-adventures-in-wonderland",
+      title: "Alice's Adventures in Wonderland",
+      author: [
+         "Lewis Carroll"
+      ],
+      description: "Alice falls down a rabbit hole into a strange world where logic shifts, creatures speak in riddles, and every encounter challenges her understanding of reality.",
+      mood: [
+         "Escapism",
+         "Wanderlust",
+         "Sad"
+      ]
+   }),
+   createBook({
+      id: "fear-and-trembling",
+      title: "Fear and Trembling",
+      author: [
+         "Soren Kierkegaard"
+      ],
+      description: "Kierkegaard reflects on faith, sacrifice, and the terrifying uncertainty of Abraham's willingness to obey a divine command.",
+      mood: [
+         "Existential Crisis",
+         "Soul Maintenance"
+      ]
+   }),
+   createBook({
+      id: "le-morte-d-arthur-1",
+      title: "Le Morte d'Arthur, Volume I",
+      author: [
+         "Thomas Malory"
+      ],
+      description: "A cycle of legends follows King Arthur, Merlin, and the knights of the Round Table through quests, rivalries, honor, and the founding of a legendary kingdom.",
+      mood: [
+         "Wrong Era",
+         "Wanderlust",
+         "Escapism"
+      ]
+   }),
+   createBook({
+      id: "le-morte-d-arthur-2",
+      title: "Le Morte d'Arthur, Volume II",
+      author: [
+         "Thomas Malory"
+      ],
+      description: "The Arthurian story moves toward its tragic conclusion as loyalties fracture, the Round Table falls into conflict, and the age of Camelot comes to an end.",
+      mood: [
+         "Wrong Era",
+         "Too Happy",
+         "Escapism"
+      ]
+   }),
+   createBook({
+      id: "melmoth-the-wanderer",
+      title: "Melmoth the Wanderer",
+      author: [
+         "Charles Maturin"
+      ],
+      description: "A man who has traded his soul for extended life searches for someone willing to take his place, encountering stories of despair, temptation, and supernatural terror.",
+      mood: [
+         "Life TOO Peaceful",
+         "Escapism"
+      ]
+   }),
+   createBook({
+      id: "tao-te-ching",
+      title: "Tao Te Ching",
+      author: [
+         "Laozi"
+      ],
+      description: "A collection of concise verses explores simplicity, humility, non-action, and living in harmony with the natural way of things.",
+      mood: [
+         "Soul Maintenance",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "the-adventures-of-pinocchio",
+      title: "The Adventures of Pinocchio",
+      author: [
+         "Carlo Collodi"
+      ],
+      description: "A wooden puppet longs to become a real boy but must learn honesty, responsibility, and courage through a series of perilous adventures.",
+      mood: [
+         "Escapism",
+         "Wanderlust"
+      ]
+   }),
+   createBook({
+      id: "the-consolation-of-philosophy",
+      title: "The Consolation of Philosophy",
+      author: [
+         "Boethius"
+      ],
+      description: "While imprisoned and awaiting execution, Boethius debates Fortune, happiness, free will, and the nature of true wisdom with Lady Philosophy.",
+      mood: [
+         "Existential Crisis",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "the-dark-eidolon",
+      title: "The Dark Eidolon and Other Poems",
+      author: [
+         "Clark Ashton Smith"
+      ],
+      description: "Darkly imaginative poems evoke doomed kingdoms, ancient sorcery, death, and strange worlds shaped by beauty and horror.",
+      mood: [
+         "Life TOO Peaceful",
+         "Escapism",
+         "Needed a Caption"
+      ]
+   }),
+   createBook({
+      id: "the-dhammapada",
+      title: "The Dhammapada",
+      description: "A collection of Buddhist verses teaches mindfulness, compassion, self-mastery, and the path toward freedom from suffering.",
+      mood: [
+         "Soul Maintenance",
+         "I Have No Idea",
+         "Existential Crisis"
+      ]
+   }),
+   createBook({
+      id: "the-mabinogion",
+      title: "The Mabinogion",
+      description: "A collection of medieval Welsh tales brings together enchanted kingdoms, heroic quests, transformations, and stories of love and revenge.",
+      mood: [
+         "Escapism",
+         "Wanderlust"
+      ]
+   }),
+   createBook({
+      id: "the-nicomachean-ethics",
+      title: "The Nicomachean Ethics",
+      author: [
+         "Aristotle"
+      ],
+      description: "Aristotle examines happiness, virtue, friendship, and practical wisdom in an inquiry into what it means to live a flourishing human life.",
+      mood: [
+         "Existential Crisis",
+         "Soul Maintenance",
+         "I Have No Idea"
+      ]
+   }),
+   createBook({
+      id: "the-prose-edda",
+      title: "The Prose Edda",
+      author: [
+         "Snorri Sturluson"
+      ],
+      description: "Norse myths tell of gods, giants, cosmic creation, heroic deeds, and the prophesied destruction and renewal of the world.",
+      mood: [
+         "Escapism",
+         "Needed a Caption"
+      ]
+   }),
+   createBook({
+      id: "the-saga-of-the-volsungs",
+      title: "The Saga of the Volsungs",
+      author: [
+         "Anonymous"
+      ],
+      description: "This Icelandic saga follows the Volsung family through heroic quests, cursed treasure, doomed love, and cycles of revenge.",
+      mood: [
+         "Wanderlust",
+         "Trust Issues",
+         "Too Happy"
+      ]
+   }),
+   createBook({
+      id: "the-strange-case-of-dr-jekyll-and-mr-hyde",
+      title: "The Strange Case of Dr Jekyll and Mr Hyde",
+      author: [
+         "Robert Louis Stevenson"
+      ],
+      description: "A respected doctor creates a potion that separates his darker impulses from his public identity, unleashing a transformation he can no longer control.",
+      mood: [
+         "Life TOO Peaceful",
+         "Trust Issues"
+      ]
+   }),
+   createBook({
+      id: "the-tale-of-tales",
+      title: "The Tale of Tales",
+      author: [
+         "Giambattista Basile"
+      ],
+      description: "A richly comic collection of early European fairy tales presents enchanted kingdoms, impossible bargains, clever tricksters, and darkly playful transformations.",
+      mood: [
+         "Escapism",
+         "Wanderlust"
+      ]
+   }),
+   createBook({
+      id: "the-wonderful-world-of-oz",
+      title: "The Wonderful Wizard of Oz",
+      author: [
+         "L. Frank Baum"
+      ],
+      description: "Swept away to the magical land of Oz, Dorothy travels along the yellow brick road with three companions who hope the Wizard can grant their deepest wishes.",
+      mood: [
+         "Escapism",
+         "Wanderlust"
+      ]
+   }),
+   createBook({
+      id: "utopia",
+      title: "Utopia",
+      author: [
+         "Thomas More"
+      ],
+      description: "A fictional account of an imagined island society questions private property, political authority, work, education, and the meaning of a well-ordered life.",
+      mood: [
+         "Existential Crisis",
+         "Wrong Era"
+      ]
+   }),
+   createBook({
+      id: "vathek",
+      title: "Vathek",
+      author: [
+         "William Beckford"
+      ],
+      description: "The ambitious caliph Vathek pursues forbidden knowledge and supernatural power, descending into a world of temptation, excess, and damnation.",
+      mood: [
+         "Life TOO Peaceful",
+         "Escapism"
+      ]
    })
 ]
 
 
-export default books;
+export default books
