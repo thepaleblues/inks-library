@@ -1,16 +1,19 @@
 const moods = [
+   // PRIMARY
    "Existential Crisis",
-   "I Have No Idea",
+   "Wrong Era",
    "Trust Issues",
-   "Life TOO Peaceful",
-   "Hopelessly Romantic",
-   "Sad",
    "Wanderlust",
+   "Hopelessly Romantic",
+   "Too Happy",
+   // SECONDARY
+   "Sad",
+   "I Have No Idea",
    "Escapism",
    "Soul Maintenance",
-   "Needed a Caption",
-   "Wrong Era",
-   "Performative",
+   // NICE TO HAVE
+   "Life TOO Peaceful",
+   "Needed a Caption"
 ]
 
 

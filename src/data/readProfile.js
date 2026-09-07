@@ -8,7 +8,7 @@ const readProfile = {
          points: 0
       },
       {
-         id: "Getting Your Life Together",
+         id: "I Have No Idea",
          points: 0
       },
       {
@@ -44,11 +44,11 @@ const readProfile = {
          points: 0
       },
       {
-         id: "Born in the Wrong Generation",
+         id: "Wrong Era",
          points: 0
       },
       {
-         id: "Performative",
+         id: "Too Happy",
          points: 0
       }
    ]

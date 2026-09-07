@@ -66,12 +66,11 @@ const dialogues = {
          'give you something new to romanticize about a time you definitely wouldn’t survive in.',
          'make modern life feel even more disappointing.'
       ],
-      "Classics": [
-         'make your bookshelf look significantly more intimidating.',
-         'make people think you have opinions about things.',
-         'look great in your hand while you pretend to understand them.'
+      "Drama & Tragedy": [
+         "ruin your good mood with some truly unnecessary suffering.",
+         "remind you that happiness is always suspiciously temporary.",
+         "make your problems feel almost charmingly insignificant."
       ]
-
    } 
 }
 

@@ -44,9 +44,10 @@ const moodAndGenre = [
       alter: "History"
    },
    {
-      mood: "Performative",
-      alter: "Classics"
+      mood: "Too Happy",
+      alter: "Drama & Tragedy"
    }
 ]
+
 
 export default moodAndGenre
