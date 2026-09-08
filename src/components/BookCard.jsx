@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 
 import { getCover } from '../utils/createBook'
-import { LIBRARY_SCROLL_KEY, HOME_SCROLL_KEY } from '../storage/localStorage';
 
 
 function BookCard({

@@ -31,3 +31,34 @@ export function loadProfile(defaultProfile) {
 // SCROLLING
 export const LIBRARY_SCROLL_KEY = "library-scroll";
 export const HOME_SCROLL_KEY = "home-scroll";
+
+// RECOMMENDATIONS
+export const DAILY_TOP_MOODS_KEY = "daily-top-moods";
+
+export function getDailyTopMoods(moodScorePoints) {
+   const today = new Date().toDateString();
+   const savedTopMoods = JSON.parse(localStorage.getItem(DAILY_TOP_MOODS_KEY));
+
+   if (
+      savedTopMoods?.date === today &&
+      savedTopMoods.moods?.[1]?.points > 0
+   ) {
+      return savedTopMoods.moods;
+   }
+
+   const topMoods = [...moodScorePoints]
+      .sort((a, b) => b.points - a.points)
+      .slice(0, 2);
+
+   if (topMoods[1]?.points > 0) {
+      localStorage.setItem(
+         DAILY_TOP_MOODS_KEY,
+         JSON.stringify({
+            date: today,
+            moods: topMoods
+         })
+      );
+   }
+
+   return topMoods;
+}

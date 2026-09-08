@@ -5,11 +5,12 @@ import {
 
 import '../index.css';
 
+import NoResults from '../components/NoResults.jsx';
+import BookCard from '../components/BookCard.jsx';
+
 import moods from '../data/moods.js';
 import dialogues from '../ink/dialogues.js'
 import books from '../data/books.js';
-import NoResults from '../components/NoResults.jsx';
-import BookCard from '../components/BookCard.jsx';
 import { LIBRARY_SCROLL_KEY } from '../storage/localStorage.js';
 
 
@@ -96,7 +97,7 @@ export function DisplayBooks({
          className="
             grid 
             grid-cols-1
-            sm:grid-cols-2 
+            sm:grid-cols-2
             lg:grid-cols-3 
             xl:grid-cols-4 
             gap-4 min-w-0

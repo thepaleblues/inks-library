@@ -1,5 +1,6 @@
-import '../index.css';
 import { useEffect } from 'react';
+
+import '../index.css';
 
 import Recommendations from '../ink/Recommendations.jsx';
 
@@ -13,21 +14,21 @@ function Hero({
    return( 
       <div 
          className="
-            home-hero
-            home-snap-section
-            flex flex-col
-            items-center
-            w-full min-h-dvh
+            flex flex-col items-center w-full min-h-dvh
             px-5 pt-24 pb-20
             sm:px-8 sm:pt-32 sm:pb-32
             text-center
             bg-white
+            home-hero
+            home-snap-section
          "
       >
          <img
-            className="block w-full max-w-60 sm:max-w-sm 
-            pt-30 sm:pt-8 md:pt-5"
             src={inksDesigns.recommend.image}
+            className="
+               block w-full max-w-60 sm:max-w-sm 
+               pt-30 sm:pt-8 md:pt-5
+            "
          />
          <h1 className="pb-5">
             {firstLine}
@@ -38,7 +39,6 @@ function Hero({
 }
 
 function Home({
-   moodScorePoints,
    topMoods,
    setCurrentBook,
    isNewUser
@@ -54,7 +54,7 @@ function Home({
    return (      
       <div className="home-page">
          {
-            isNewUser || topMoods.length.points === 0 ?  (
+            isNewUser || topMoods[1].points === 0 ?  (
                <Hero 
                   firstLine="Welcome to my library."
                   secondLine="Try not to mess with my shelves."
@@ -66,7 +66,6 @@ function Home({
                      secondLine="I trust you know your way around by now."
                   />
                   <Recommendations 
-                     moodScorePoints={moodScorePoints}
                      topMoods={topMoods}
                      setCurrentBook={setCurrentBook}
                   />

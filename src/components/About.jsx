@@ -1,18 +1,21 @@
-import { useEffect } from 'react'
-
 import inksDesigns from '../ink/designs'
 
 
 function How({ num, title, texts }) {
    return(
-      <div className="
+      <div 
+         className="
             flex-1 basis-0 
             px-5 pt-10 pb-15
             bg-white
          "
       >
-         <h3 className="pb-3">{num}</h3>
-         <h4 className="pb-3">{title.toUpperCase()}</h4>
+         <h3 className="pb-3">
+            {num}
+         </h3>
+         <h4 className="pb-3">
+            {title.toUpperCase()}
+         </h4>
          <p>{texts}</p>
       </div>
    )
@@ -20,7 +23,8 @@ function How({ num, title, texts }) {
 
 function About() {
    return (
-      <div className="
+      <div 
+         className="
             flex flex-col items-center
             min-h-dvh
             px-5 pt-20 sm:px-8 lg:px-20 xl:px-60
@@ -33,10 +37,10 @@ function About() {
             <h1 className="pb-5">
                   About Ink
             </h1>
-             <img
+            <img
                src={inksDesigns.question.image}
-               className="max-h-40 pl-3">
-            </img>
+               className="max-h-40 pl-3"
+            />
          </div>
 
          <div className="w-full pt-10">

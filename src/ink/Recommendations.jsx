@@ -116,10 +116,6 @@ function Recommendations({ topMoods, setCurrentBook }) {
 
    const [first, second] = moodData;
 
-   if (!second?.mood?.points) {
-      return null;
-   }
-
    return (
       topMoods[1].points === 0 ? (
          null

@@ -152,13 +152,9 @@ function BookDetails ({
 
    return (
       <div className="
+            w-full min-h-dvh
+            px-5 sm:px-8 md:px-12 lg:px-34 xl:px-60 2xl:px-90
             bg-white
-            px-5  w-full min-h-dvh
-            sm:px-8 
-            md:px-12 
-            lg:px-34 
-            xl:px-60 
-            2xl:px-90
          "
       >
          <div className="pt-6 sm:pt-8 md:pt-30">

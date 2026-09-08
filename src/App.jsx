@@ -20,12 +20,13 @@ import ChangePagesLogic from './components/ChangePagesLogic.jsx';
 import readProfile from './data/readProfile.js';
 import { 
   checkFirstVisit,  
-  loadProfile
+  loadProfile,
+  getDailyTopMoods
 } from './storage/localStorage.js';
 
 
 function App() {
-  const [isNewUser, setIsNewUser] = useState(() => checkFirstVisit());
+  const [isNewUser] = useState(() => checkFirstVisit());
   
   const [currentBook, setCurrentBook] = useState(null);
   
@@ -34,9 +35,7 @@ function App() {
   const [viewedBook, setViewedBook] = useState(initialProfile.viewedBooks);
   const [moodScorePoints, setMoodScorePoints] = useState(initialProfile.moodScore);
   
-  const topMoods = [...moodScorePoints]
-    .sort((a, b) => b.points - a.points) 
-    .slice(0, 2);
+  const topMoods = getDailyTopMoods(moodScorePoints);
   
   const [filters, setFilters] = useState(() => {
     const saved = sessionStorage.getItem("library-filters");
@@ -68,7 +67,6 @@ function App() {
               isNewUser={isNewUser}
               currentBook={currentBook}
               setCurrentBook={setCurrentBook}
-              moodScorePoints={moodScorePoints}
               topMoods={topMoods}
             />} 
           />
