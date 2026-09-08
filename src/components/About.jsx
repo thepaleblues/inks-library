@@ -27,7 +27,7 @@ function About() {
          className="
             flex flex-col items-center
             min-h-dvh
-            px-5 pt-20 sm:px-8 lg:px-20 xl:px-60
+            px-5 pb-20 pt-15 sm:pt-30 sm:px-8 lg:px-20 xl:px-60
             text-center
             bg-grey-gradient
          "

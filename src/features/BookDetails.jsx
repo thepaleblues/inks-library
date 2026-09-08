@@ -25,7 +25,12 @@ function BookInfo({
    const previousPage = location.state?.from
 
    return (
-      <div className="flex flex-col gap-8 md:flex-row md:gap-0">
+      <div 
+         className="
+            min-h-screen flex flex-col gap-8 md:flex-row md:gap-0
+            sm:pt-20
+         "
+      >
          
          {/* COVER */}
          <div 
@@ -152,12 +157,12 @@ function BookDetails ({
 
    return (
       <div className="
-            w-full min-h-dvh
-            px-5 sm:px-8 md:px-12 lg:px-34 xl:px-60 2xl:px-90
+            flex flex-col items-center w-full min-h-screen
+            px-5 sm:pt-30 sm:px-8 md:px-12 lg:px-34 xl:px-60 2xl:px-90
             bg-white
          "
       >
-         <div className="pt-6 sm:pt-8 md:pt-30">
+         <div className="">
             <BookInfo
                id={book.id}
                title={book.title}

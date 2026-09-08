@@ -14,9 +14,8 @@ function Hero({
    return( 
       <div 
          className="
-            flex flex-col items-center w-full min-h-dvh
-            px-5 pt-24 pb-20
-            sm:px-8 sm:pt-32 sm:pb-32
+            flex flex-col items-center w-full min-h-screen justify-center
+            sm:pd-20
             text-center
             bg-white
             home-hero
@@ -26,8 +25,7 @@ function Hero({
          <img
             src={inksDesigns.recommend.image}
             className="
-               block w-full max-w-60 sm:max-w-sm 
-               pt-30 sm:pt-8 md:pt-5
+               block w-full max-w-60 sm:max-w-sm
             "
          />
          <h1 className="pb-5">

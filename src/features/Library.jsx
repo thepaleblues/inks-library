@@ -18,7 +18,7 @@ function BackToTopBtn({ visible, onClick }) {
    if (!visible) return null;
 
    return (
-      <div className="fixed right-5 top-1/2 z-50 -translate-y-1/2">
+      <div className="fixed right-5 top-1/2 z-50 -translate-y-1/2 max-sm:bottom-8 max-sm:right-3 max-sm:top-auto max-sm:-translate-y-0">
          <button
             type="button"
             onClick={onClick}
@@ -50,7 +50,7 @@ function Filters({
                gap-2
                w-full
                grid-cols-2
-               sm:grid-cols-2
+               sm:grid-cols-2 
                md:grid-cols-3
                lg:grid-cols-4
                xl:grid-cols-6
@@ -207,22 +207,29 @@ function Library({
             w-full
             px-30 pt-20 pb-60      
             bg-grey-gradient 
+            max-sm:px-5 max-sm:pt-16
          "
       >
-         <div className="flex items-center gap-4">
+         <div className="flex items-center gap-4 max-sm:flex-col max-sm:items-stretch max-sm:gap-2">
             <h3 
                className="
                   min-w-0 flex-1
                   py-10 pt-20
                   text-2xl font-bold
                   sm:text-3xl
+                  max-sm:py-2 max-sm:pt-14 max-sm:pb-2
                "
             >
                {dialogues.defaults.moodFilter}
             </h3>
             
             {/* SEARCH */}
-            <div className="relative mt-10 shrink-0">
+            <div 
+               className="
+                  relative mt-10 shrink-0 max-sm:mt-0 max-sm:w-full
+                  pb-5 sm:pb-0
+               "
+            >
                <input
                   type="search"
                   placeholder="...or search"
@@ -237,6 +244,7 @@ function Library({
                      rounded-2xl
                      focus:outline-none
                      sm:w-60
+                     max-sm:w-full
                   "
                />
                {filters.search && (

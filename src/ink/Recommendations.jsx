@@ -137,7 +137,7 @@ function Recommendations({ topMoods, setCurrentBook }) {
                   "
                > 
                      <div className="">
-                        <h1 className="pt-16 text-center">
+                        <h1 className="pt-20 sm:pt-10 text-center">
                            {dialogues.reco.firstBook}
                            {first.alter?.toLowerCase()}.
                         </h1>
@@ -159,6 +159,7 @@ function Recommendations({ topMoods, setCurrentBook }) {
                   className="
                      home-snap-section
                      flex min-h-dvh flex-col justify-center
+                     pb-20
                   "
                >
                   <div 
