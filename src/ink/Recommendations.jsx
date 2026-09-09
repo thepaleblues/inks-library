@@ -142,7 +142,7 @@ function Recommendations({ topMoods, setCurrentBook }) {
                            {first.alter?.toLowerCase()}.
                         </h1>
 
-                        <p className="pt-5 text-center">
+                        <p className="pt-5 text-center sm:pb-15">
                            {dialogues.reco.firstBookComment}
                            <b>{first.dialogue}</b>
                         </p>
