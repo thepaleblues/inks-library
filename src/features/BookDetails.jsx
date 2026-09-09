@@ -27,8 +27,15 @@ function BookInfo({
    return (
       <div 
          className="
-            min-h-screen flex flex-col gap-8 md:flex-row md:gap-0
-            sm:pt-20
+            min-h-dvh
+            flex flex-col items-center justify-center gap-8
+            md:flex-row md:gap-0 md:-translate-y-20
+            px-5
+            sm:px-8
+            md:px-12
+            lg:px-34
+            xl:px-60
+            2xl:px-100
          "
       >
          
@@ -156,10 +163,9 @@ function BookDetails ({
    );
 
    return (
-      <div className="
-            flex flex-col items-center w-full min-h-screen
-            px-5 sm:pt-30 sm:px-8 md:px-12 lg:px-34 xl:px-60 2xl:px-90
-            bg-white
+      <div 
+         className="
+
          "
       >
          <div className="">
