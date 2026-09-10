@@ -27,7 +27,12 @@ function Footer() {
             Book editions featured on Ink's Library are from Penguin Classics.
          </p>
          <p className="text-center">
-            © 2026 Ink's Library · @thepaleblues
+            © 2026 Ink's Library ·  
+            <a href="https://github.com/thepaleblues"
+               className="hover:underline"
+            >
+                @thepaleblues
+            </a>
          </p>
          <p className="text-center pt-24">
             P.S. Ink WILL judge you.
