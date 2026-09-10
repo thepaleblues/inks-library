@@ -19,15 +19,12 @@ import ChangePagesLogic from './components/ChangePagesLogic.jsx';
 
 import readProfile from './data/readProfile.js';
 import { 
-  checkFirstVisit,  
   loadProfile,
   getDailyTopMoods
 } from './storage/localStorage.js';
 
 
 function App() {
-  const [isNewUser] = useState(() => checkFirstVisit());
-  
   const [currentBook, setCurrentBook] = useState(null);
   
   const initialProfile = loadProfile(readProfile);
@@ -63,8 +60,7 @@ function App() {
         <Routes>
           <Route 
             path="/" 
-            element={<Home 
-              isNewUser={isNewUser}
+            element={<Home
               currentBook={currentBook}
               setCurrentBook={setCurrentBook}
               topMoods={topMoods}

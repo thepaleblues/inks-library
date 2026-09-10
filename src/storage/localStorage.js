@@ -34,6 +34,7 @@ export const HOME_SCROLL_KEY = "home-scroll";
 
 // RECOMMENDATIONS
 export const DAILY_TOP_MOODS_KEY = "daily-top-moods";
+export const MIN_SCORE_POINTS = 2;
 
 export function getDailyTopMoods(moodScorePoints) {
    const today = new Date().toDateString();
@@ -41,7 +42,7 @@ export function getDailyTopMoods(moodScorePoints) {
 
    if (
       savedTopMoods?.date === today &&
-      savedTopMoods.moods?.[1]?.points > 0
+      savedTopMoods.moods?.[1]?.points >= MIN_SCORE_POINTS
    ) {
       return savedTopMoods.moods;
    }
@@ -50,7 +51,7 @@ export function getDailyTopMoods(moodScorePoints) {
       .sort((a, b) => b.points - a.points)
       .slice(0, 2);
 
-   if (topMoods[1]?.points > 0) {
+   if (topMoods[1]?.points >= MIN_SCORE_POINTS) {
       localStorage.setItem(
          DAILY_TOP_MOODS_KEY,
          JSON.stringify({

@@ -5,6 +5,7 @@ import '../index.css';
 import Recommendations from '../ink/Recommendations.jsx';
 
 import inksDesigns from '../ink/designs.js';
+import { MIN_SCORE_POINTS } from '../storage/localStorage.js';
 
 
 function Hero({ 
@@ -38,9 +39,10 @@ function Hero({
 
 function Home({
    topMoods,
-   setCurrentBook,
-   isNewUser
+   setCurrentBook
 }) {
+   const hasBrowsed = topMoods[1].points >= MIN_SCORE_POINTS;
+
    useEffect(() => {
       document.documentElement.classList.add('home-scroll');
 
@@ -52,23 +54,23 @@ function Home({
    return (      
       <div className="home-page">
          {
-            isNewUser || topMoods[1].points === 0 ?  (
-               <Hero 
-                  firstLine="Welcome to my library."
-                  secondLine="Try not to mess with my shelves."
-               />
-            ) : (
+            hasBrowsed ? (
                <>
                   <Hero
-                     firstLine="Welcome back to my library."
-                     secondLine="I trust you know your way around by now."
+                     firstLine="Welcome back."
+                     secondLine="See what I picked for you today."
                   />
                   <Recommendations 
                      topMoods={topMoods}
                      setCurrentBook={setCurrentBook}
                   />
                </>
-            )
+            ) : (
+               <Hero 
+                  firstLine="Welcome to my library."
+                  secondLine="Browse a bit, then come back. You're welcome."
+               />
+            ) 
          }
       </div>
    );
