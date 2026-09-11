@@ -63,7 +63,7 @@ Here are the mood and genre mappings:
 | Wrong Era | History |
 | Trust Issues | Thriller & Mystery |
 | Wanderlust | Adventure |
-| Hopelessly Romantic | Romance |
+| Delusional | Romance |
 | Too Happy | Drama & Tragedy |
 | Sad | Comedy |
 | I Have No Idea | Self Help |

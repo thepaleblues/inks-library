@@ -4,7 +4,7 @@ const moods = [
    "Wrong Era",
    "Trust Issues",
    "Wanderlust",
-   "Hopelessly Romantic",
+   "Delusional",
    "Too Happy",
    // SECONDARY
    "Sad",

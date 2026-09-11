@@ -16,7 +16,7 @@ const moodAndGenre = [
       alter: "Horror"
    },
    {
-      mood: "Hopelessly Romantic",
+      mood: "Delusional",
       alter: "Romance"
    },
    {

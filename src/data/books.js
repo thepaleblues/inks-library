@@ -218,7 +218,7 @@ const books  = [
       description: "Count Dracula travels from Transylvania to England, where a group of people uncover his supernatural nature and attempt to stop his terrifying plans.",
       mood: [
          "Life TOO Peaceful",
-         "Hopelessly Romantic",
+         "Delusional",
       ]
    }),
    createBook({
@@ -229,7 +229,7 @@ const books  = [
       ],
       description: "Emma Woodhouse, a wealthy young woman who enjoys arranging romances for others, gradually learns that her assumptions about love and relationships are often mistaken.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Sad"
       ]
    }),
@@ -278,7 +278,7 @@ const books  = [
       description: "Moll Flanders recounts her adventurous life of poverty, crime, marriage, and survival while navigating the social realities of eighteenth-century England.",
       mood: [
          "Wanderlust",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -290,7 +290,7 @@ const books  = [
       description: "Alexei, a young tutor employed by a wealthy Russian family, becomes consumed by gambling while navigating obsession, love, and financial desperation.",
       mood: [
          "Too Happy",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -302,7 +302,7 @@ const books  = [
       description: "A collection of short stories portraying ordinary moments, social divisions, personal discoveries, and emotional changes in early twentieth-century life.",
       mood: [
          "Too Happy",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -337,7 +337,7 @@ const books  = [
 	   ],
       description: "A narrator recounts the complicated relationships between two couples, gradually revealing betrayal, deception, and hidden emotional conflicts.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -373,7 +373,7 @@ const books  = [
 	   ],
       description: "In medieval Paris, the lives of Quasimodo, Esmeralda, and Archdeacon Frollo become connected through love, obsession, and tragedy.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -385,7 +385,7 @@ const books  = [
 	   ],
       description: "Prince Myshkin returns to Russian society with compassion and innocence but struggles against greed, jealousy, and social corruption.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -409,7 +409,7 @@ const books  = [
 	   ],
       description: "Jane Eyre grows from an isolated childhood into an independent woman while facing hardship, love, and the secrets surrounding Thornfield Hall.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -442,7 +442,7 @@ const books  = [
 	   ],
       description: "Emma Bovary searches for excitement beyond her provincial life through romance, luxury, and fantasy, but her desires lead to debt, disappointment, and tragedy.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ],
    }),
@@ -478,7 +478,7 @@ const books  = [
 	   ],
       description: "Set in a provincial English town, the novel intertwines the lives of several characters as they navigate marriage, ambition, politics, and personal growth.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -490,7 +490,7 @@ const books  = [
 	   ],
       description: "Maggie Tulliver grows up in rural England struggling between personal desires, family expectations, and the limitations placed on women of her time.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -562,7 +562,7 @@ const books  = [
 	   ],
       description: "Elizabeth Bennet navigates family pressures, social expectations, and her changing relationship with the wealthy and reserved Mr. Darcy.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Sad"
       ]
    }),
@@ -586,7 +586,7 @@ const books  = [
 	   ],
       description: "Elinor and Marianne Dashwood experience contrasting approaches to love, relationships, and social expectations while facing financial uncertainty after their family’s loss of fortune.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Sad"
       ]
    }),
@@ -599,7 +599,7 @@ const books  = [
       description: "Guests at a banquet discuss the meaning of love, beauty, desire, and the pursuit of wisdom through philosophical speeches.",
       mood: [
          "Existential Crisis",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -611,7 +611,7 @@ const books  = [
       description: "Petruchio attempts to marry and “tame” the strong-willed Katharina in a comedy about courtship, gender roles, and social expectations.",
       mood: [
          "Sad",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -635,7 +635,7 @@ const books  = [
       description: "The Ramsay family’s visits to a Scottish island reveal changing relationships, personal memories, and the passage of time across generations.",
       mood: [  
          "Too Happy",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -647,7 +647,7 @@ const books  = [
       description: "Tristram attempts to tell the story of his life but becomes distracted by countless digressions, creating a playful and unconventional comic narrative.",
       mood: [
          "Sad",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -683,7 +683,7 @@ const books  = [
       description: "Several aristocratic families experience love, ambition, and personal transformation during the Napoleonic invasion of Russia.",
       mood: [
          "Wrong Era",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -694,7 +694,7 @@ const books  = [
 	   ],
       description: "The turbulent relationship between Heathcliff and Catherine shapes generations of families through passion, revenge, and emotional destruction.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -825,7 +825,7 @@ const books  = [
 	   ],
       description: "Two young lovers from feuding families pursue a forbidden romance with tragic consequences.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -862,7 +862,7 @@ const books  = [
       description: "Two couples navigate deception, misunderstandings, and romance in one of Shakespeare's most celebrated comedies.",
       mood: [
          "Sad",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -874,7 +874,7 @@ const books  = [
       description: "Ten young people escaping the plague tell one hundred stories about love, fortune, deception, and human nature.",
       mood: [
          "Sad",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -958,7 +958,7 @@ const books  = [
       description: "Socrates explores love, rhetoric, beauty, and the nature of the soul through philosophical dialogue.",
       mood: [
          "Existential Crisis",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -969,7 +969,7 @@ const books  = [
 	   ],
       description: "A young woman navigates class divisions, industrial conflict, and romance in Victorian England.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Wrong Era"
       ]
    }),
@@ -981,7 +981,7 @@ const books  = [
 	   ],
       description: "A quiet English village is portrayed through humorous and affectionate stories of its people.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Sad"
       ]
    }),
@@ -994,7 +994,7 @@ const books  = [
       description: "Crisóstomo Ibarra returns to the Philippines hoping to reform society but encounters corruption, injustice, and the abuses of Spanish colonial rule.",
       mood: [
          "Wrong Era",
-         "Hopelessly Romantic",
+         "Delusional",
       ]
    }),
    createBook({
@@ -1018,7 +1018,7 @@ const books  = [
       description: "Stories blending history, memory, identity, and myth explore the complexities of Filipino culture.",
       mood: [
          "Too Happy",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -1041,7 +1041,7 @@ const books  = [
 	   ],
       description: "Anna Karenina enters a passionate relationship that challenges the expectations of Russian society while the lives of several families explore love, marriage, faith, and personal fulfillment.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -1065,7 +1065,7 @@ const books  = [
 	   ],
       description: "Resentful of her wealthy relatives, Cousin Bette quietly sets in motion a series of schemes that threaten the lives and fortunes of an entire family.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -1077,7 +1077,7 @@ const books  = [
 	   ],
       description: "Two aristocrats manipulate friends and lovers through deception and seduction, turning their private games into destructive consequences.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Trust Issues"
       ]
    }),
@@ -1089,7 +1089,7 @@ const books  = [
 	   ],
       description: "David Copperfield recounts his journey from a difficult childhood to adulthood while discovering friendship, ambition, and his place in the world.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Wanderlust"
       ]
    }),
@@ -1126,7 +1126,7 @@ const books  = [
       description: "A disillusioned nobleman and a thoughtful young woman experience missed opportunities, love, and regret across the changing seasons of their lives.",
       mood: [
          "Needed a Caption",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -1149,7 +1149,7 @@ const books  = [
 	   ],
       description: "Pip, an orphan raised in humble circumstances, unexpectedly gains the opportunity to become a gentleman while discovering the true meaning of wealth, loyalty, and love.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Wanderlust"
       ]
    }),
@@ -1221,7 +1221,7 @@ const books  = [
 	   ],
       description: "An ambitious young poet leaves his provincial home for Paris, where success, journalism, and society test his ideals and integrity.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Wrong Era"
       ]
    }),
@@ -1269,7 +1269,7 @@ const books  = [
 	   ],
       description: "A respected New York lawyer finds his engagement challenged when an unconventional woman forces him to question duty, love, and social expectations.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -1281,7 +1281,7 @@ const books  = [
 	   ],
       description: "Lily Bart struggles to maintain her place within New York's wealthy society while balancing love, ambition, and financial insecurity.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Too Happy"
       ]
    }),
@@ -1318,7 +1318,7 @@ const books  = [
       description: "A mysterious masked figure haunting the Paris Opera House becomes obsessed with a talented young singer, leading to love, jealousy, and suspense.",
       mood: [
          "Life TOO Peaceful",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -1329,7 +1329,7 @@ const books  = [
 	   ],
       description: "Julien Sorel attempts to rise above his humble origins through ambition, romance, and calculated social advancement in post-Napoleonic France.",
       mood: [
-         "Hopelessly Romantic",
+         "Delusional",
          "Wrong Era"
       ]
    }),
@@ -1342,7 +1342,7 @@ const books  = [
       description: "A young swordsman joins three legendary musketeers in adventures involving loyalty, political intrigue, and daring exploits across France.",
       mood: [
          "Wanderlust",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({
@@ -1366,7 +1366,7 @@ const books  = [
       description: "A chance encounter with a mysterious woman draws a young art teacher into a web of secrets, mistaken identities, and conspiracy.",
       mood: [
          "Trust Issues",
-         "Hopelessly Romantic"
+         "Delusional"
       ]
    }),
    createBook({

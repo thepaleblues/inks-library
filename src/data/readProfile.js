@@ -20,7 +20,7 @@ const readProfile = {
          points: 0
       },
       {
-         id: "Hopelessly Romantic",
+         id: "Delusional",
          points: 0
       },
       {
