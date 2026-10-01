@@ -30,6 +30,7 @@ function BackToTopBtn({ visible, onClick }) {
                hover:bg-stone-700
                transition
                text-sm
+               cursor-pointer
             "
          >
             ↑
@@ -68,6 +69,7 @@ function Filters({
                            bg-white text-stone-600
                            rounded-xl
                            hover:bg-black/20
+                           cursor-pointer
                            ${isActive ? "!bg-black text-white" : ""}
                         `}
                         aria-pressed={isActive}
